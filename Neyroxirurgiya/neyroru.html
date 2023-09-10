@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://dev.zarmedpratiksha.uz/backend/web/img/logo.svg" type="image/x-icon">
+    <title>Нейрохирургия</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #283779;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* SITE-CONTAINER */
+        .site-container {
+            width: 88%;
+            margin: 0 auto;
+        }
+
+        .bg-primary,
+        .btn-primary {
+            background-color: var(--primary) !important;
+        }
+
+        .text-primary {
+            color: var(--primary) !important;
+        }
+
+        /* ----- HEADER ----- */
+
+        .header {
+            height: 90px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            background-color: #fff;
+        }
+
+        .header-contact i {
+            font-size: 23px;
+        }
+
+        .header-contact span {
+            font-size: 18px;
+        }
+
+        /*  ---- HERO  -----*/
+
+        .hero {
+            padding-top: 90px;
+        }
+
+        .hero .hero-img {
+            display: block;
+            height: calc(100vh - 90px);
+            width: 80%;
+            margin: 0 auto;
+        }
+
+
+        /*  ---- RECEPTION --- */
+
+        .reception-form .reception-form-title {
+            font-weight: 600;
+        }
+
+        .reception-form input,
+        .reception-form textarea {
+            box-shadow: none !important;
+            padding: 10px 20px;
+            border: 1px solid #eee;
+            background-color: #fbfbfb;
+        }
+
+        /* ----- SERVICES ------  */
+
+        .services-title {
+            font-weight: 600;
+        }
+
+        .services-list .services-item {
+            font-size: 22px;
+            color: #02030a;
+            font-weight: 500;
+        }
+
+        .services-list .services-item:not(:last-child) {
+            margin-bottom: 13px;
+        }
+
+        .services-list .services-item i {
+            font-size: 24px;
+            margin-right: 5px;
+        }
+
+        /* ----- DOCTORS ---- */
+
+        .doctors-inner {
+            background-color: #131c411f;
+            box-shadow: 0 0 20px #28377930;
+            border-radius: 20px;
+            margin-top: 60px;
+        }
+
+        .card-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 10px solid var(--primary);
+        }
+
+        .accordion-item {
+            background-color: transparent !important;
+        }
+
+        .doctors-inner .card .card-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #222;
+        }
+
+        .doctors-inner .card-text {
+            text-align: justify;
+        }
+
+        /* ----- VIDEOS -------- */
+        .videos-inner {
+            background-color: #131c411f;
+            box-shadow: 0 0 20px #28377930;
+            border-radius: 20px;
+        }
+
+        /* ------ FOOTER ---- */
+        .social-link {
+            text-decoration: none;
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border: 1px solid blue;
+            box-shadow: 0 0 10px rgb(183, 183, 228);
+            color: blue;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+
+        /* ------- MEDIA QUERY ------ */
+        @media only screen and (max-width: 900px) {
+            .hero .hero-img {
+                height: calc(45vh - 90px);
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .site-container {
+                width: 94%;
+            }
+
+            .logo-img {
+                width: 150px;
+            }
+
+            .hero .hero-img {
+                width: 95%;
+            }
+        }
+
+        @media only screen and (max-width: 576px) {
+            .services-list .services-item {
+                font-size: 18px;
+            }
+
+            .card-img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+        @media only screen and (max-width: 450px) {
+            .logo-img {
+                width: 130px;
+            }
+
+            .header-contact i {
+                font-size: 20px;
+            }
+
+            .header-contact span {
+                font-size: 16px;
+            }
+
+            .lang-btn {
+                padding: 3px 6px;
+                font-size: 15px;
+            }
+
+            .doctors-inner .card .card-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="site-container">
+            <div class="header__inner d-flex justify-content-between align-items-center">
+                <a href="" class="header__logo d-block">
+                    <img class="logo-img" src="https://zarmedpratiksha.uz/backend/web/img/logo.svg" alt="logo"
+                        width="180">
+                </a>
+                <div class="d-flex align-items-center">
+                    <a href="tel:+998557021063"
+                        class="text-primary text-decoration-none d-flex align-items-center header-contact">
+                        <i class="fa-solid fa-phone-volume me-sm-2 me-1"></i>
+                        <span class="fw-bold">+998 55 702 10 63</span>
+                    </a>
+                    <a href="https://zarmedpratiksha.uz/page?u=neyrojarrohlik" target="_blank"
+                        class="btn btn-primary ms-3 border-0 d-none d-md-block">O'zbekcha</a>
+                    <a href="https://zarmedpratiksha.uz/page?u=neyrojarrohlik" target="_blank"
+                        class="btn btn-primary ms-2 border-0 d-block d-md-none lang-btn">Uz</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <div class="hero">
+            <div class="site-container">
+                <div class="hero-img-box">
+                    <img src="https://zarmedpratiksha.uz/uploads/landpage/neyroru.jpg?_t=1657260713" alt="hero-img"
+                        width="100%" height="600" class="hero-img">
+                </div>
+            </div>
+        </div>
+
+        <!--  RECEPTION -->
+        <div class="reception my-5">
+            <div class="site-container">
+                <div class="reception-inner">
+                    <div class="row gx-md-5 gx-0 align-items-center">
+                        <div class="col-md-6">
+                            <div class="reception-media">
+                                <iframe width="560" height="315" class="w-100 d-block"
+                                    src="https://www.youtube.com/embed/9SIoOMSFm8k"
+                                    title="Итоги ушедшего плодотворного 2022 года  для &quot;ZARMED PRATIKSHA Bog&#39;ishamol&quot; ."
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="reception-form-box pt-md-0 pt-5">
+                                <form id="form" class="reception-form">
+                                    <h2 class="reception-form-title w-lg-75 mx-lg-auto text-primary text-center">ЗАПИСЬ
+                                        НА ПРИЁМ К
+                                        СПЕЦИАЛИСТУ</h2>
+                                    <input type="text" class="form-control mb-3 mt-4" name="ism" id="ism"
+                                        placeholder="Имя" required>
+                                    <input type="tel" class="form-control mb-3" name="tel" id="tel" placeholder="Tел"
+                                        required>
+                                    <input type="email" class="form-control mb-3" name="email" id="email"
+                                        placeholder="Эл.почта">
+                                    <textarea name="message" id="message" class="form-control my-2"
+                                        placeholder="Сообщение" required></textarea>
+                                    <button type="submit" id="button"
+                                        class="btn btn-primary w-100 py-2">Отправить</button>
+                                </form>
+                            </div>
+                            <!-- Formadan pochtaga xabar yuborish uchun script -->
+
+                                        <script type="text/javascript"
+                        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                                <script type="text/javascript">
+                                    emailjs.init('aYgzAqtKOYy5Utpai')
+                                    const btn = document.getElementById('button');
+                            document.getElementById('form')
+                            .addEventListener('submit', function(event) {
+                            event.preventDefault();
+                            btn.value = 'Отправка...';
+                            const serviceID = 'default_service';
+                            const templateID = 'template_g9jh70b';
+                            emailjs.sendForm(serviceID, templateID, this)
+                                .then(() => {
+                                btn.value = 'Отправил';
+                                alert('Сообщение было отправлено');
+                                    document.getElementById("ism").value = '';
+                                    document.getElementById('tel').value = '';
+                                    document.getElementById('email').value = '';
+                                    document.getElementById('message').value = '';
+                                }, (err) => {
+                                btn.value = 'Send Email';
+                                alert(JSON.stringify(err));
+                                });
+                            });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ----- SERVICES ------ -->
+        <div class="services pt-4">
+            <div class="site-container">
+                <div class="services-inne">
+                    <h3 class="services-title text-primary mb-5">УСЛУГИ НЕЙРОХИРУРГИЧЕСКОГО ОТДЕЛЕНИЯ:</h3>
+                    <div class="services-list-box">
+                        <ul class="services-list">
+                            <li class="services-item">
+                                <i class="fas fa-plus-circle"></i>
+                                Спинальная нейрохирургия (микроскопические миниинвазивные операции при грыжах шейного,
+                                грудного, поясничного отделов позвоночника, реконструктивные операции на позвоночнике,
+                                позвоночная травма и ее последствия)
+                            </li>
+                            <li class="services-item">
+                                <i class="fas fa-plus-circle"></i>
+                                Малоинвазивные операции при геморрагических инсультах
+                            </li>
+                            <li class="services-item">
+                                <i class="fas fa-plus-circle"></i>
+                                Нейротравма и ее последствия
+                            </li>
+                            <li class="services-item">
+                                <i class="fas fa-plus-circle"></i>
+                                Нейроонкология (опухоли головного и спинного мозга)
+                            </li>
+                            <li class="services-item">
+                                <i class="fas fa-plus-circle"></i>
+                                Детская нейрохирургия гидроцефалия, пороки развития ЦНС
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ------ DOCTORS ----- -->
+        <div class="doctors">
+            <div class="site-container">
+                <div class="doctors-inner p-sm-4 p-1">
+                    <h3 class="doctors-title text-center fw-bold text-primary mb-5">ЭКСПЕРТЫ НЕЙРОХИРУРГИЧЕСКОГО
+                        ОТДЕЛЕНИЯ
+                    </h3>
+                    <div class="doctors-list">
+                        <div class="row">
+                            <!-- --- Doctor 1 card ----->
+                            <div class="col-md-6">
+                                <div class="doctors-list-item">
+                                    <div class="card bg-transparent border-0">
+                                        <div class="card-img-box text-center">
+                                            <img width="300" height="300"
+                                                src="http://zarmedpratiksha.uz/uploads/landpage/Neyrojarohlik/Agzamov.jpg?_t=1669024712"
+                                                class="card-img" alt="doctor-img">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 style="text-transform: capitalize;" class="card-title text-center">
+                                                Агзамов Мансур Камалович</h5>
+                                            <div class="card-text text-primary">
+                                                <div class="accordion bg-transparent">
+                                                    <div class="accordion-item text-primary">
+                                                        <p class="accordion-header">
+                                                            Агзамов Мансур Камалович - доктор медицинских наук,
+                                                            нейрохирург клиники ZARMED PRATIKSHA Bog'ishamol, врач более
+                                                            чем 30-летним стажем, специалист международного уровня.
+                                                        </p>
+                                                        <div id="collapseOne"
+                                                            class="accordion-collapse collapse m-0 p-0"
+                                                            data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body p-0">
+                                                                в 1995 году защитил кандидатскую диссертацию в Ташкенте,
+                                                                а в 2010-м докторскую в Санкт-Петербурге. в октябре 2013
+                                                                года Мансуру Камоловичу присвоено ученое звание
+                                                                члена-корреспондента Российской Академии Естествознания
+                                                                (РАЕ). Автор более 180 печатных работ, опубликованных в
+                                                                Узбекистане, России, Украине, Германии, Франции, Турции,
+                                                                США, Корее, Италии, Казахстане. Имеет 7 патентов на
+                                                                изобретение в области медицины (4 патента рф, 2 патента
+                                                                руз, 1 патент, Республики Казахстан), за что награждён
+                                                                медалью им. А. Нобеля Российской Академии
+                                                                Естествознания.
+                                                            </div>
+                                                        </div>
+                                                        <button class="btn btn-primary" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                            aria-expanded="true" aria-controls="collapseOne">
+                                                            Еще
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- --- Doctor 2 card ----->
+                            <div class="col-md-6">
+                                <div class="doctors-list-item">
+                                    <div class="card bg-transparent border-0">
+                                        <div class="card-img-box text-center">
+                                            <img width="300" height="300"
+                                                src="https://zarmedpratiksha.uz/uploads/landpage/Neyrojarohlik/Bunyod3.jpg?_t=1668862820"
+                                                class="card-img" alt="doctor-img">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 style="text-transform: capitalize;" class="card-title text-center">
+                                                Узаков Бунёд Музаффарович</h5>
+                                            <div class="card-text text-primary">
+                                                <div class="accordion bg-transparent">
+                                                    <div class="accordion-item text-primary">
+                                                        <p class="accordion-header">
+                                                            Узаков Бунёд Музаффарович - врач-нейрохирург. В 2010 году
+                                                            окончил Педиатрический Факультет Самаркандского
+                                                            Государственного Медицинского Института.
+                                                        </p>
+                                                        <div id="collapseTwo"
+                                                            class="accordion-collapse collapse m-0 p-0"
+                                                            data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body p-0">
+                                                                В 2010-2012 годах прошел клиническую ординатуру на
+                                                                кафедре нейрохирургии РНЦСМП. В 2012-2014 годах работал
+                                                                дежурным нейрохирургом Приемного отделения РНЦСМП, затем
+                                                                в 2014-2018 годах работал врачом нейрохирургом
+                                                                нейрохирургического отделения РНЦСМП. С 2018 по 2021 год
+                                                                работал врачом-нейрохирургом заведующим отделением
+                                                                детской травматологии и хирургии РНЦСМП. Самостоятельно
+                                                                выполняет эпидуральные, субдуральные операции переломов.
+                                                                С октября 2021 года работает нейрохирургом в клинике
+                                                                ZARMЕD PRATIKSHA Bog’ishamol.
+                                                            </div>
+                                                        </div>
+                                                        <button class="btn btn-primary" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                            aria-expanded="true" aria-controls="collapseTwo">
+                                                            Еще
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ----- VIDEOS ---- -->
+        <div class="videos my-5">
+            <div class="site-container">
+                <div class="videos-inner p-md-4 p-2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <iframe class="w-100 rounded" height="300" src="https://www.youtube.com/embed/_vrGKpRD6Rs"
+                                title="ZARMED PRATIKSHA Bog&#39;ishamol. Neyrojarrohlik. Нейрохирургия." frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="col-md-6 mt-md-0 mt-3">
+                            <iframe class="w-100 rounded" height="300" src="https://www.youtube.com/embed/3IYMeFYay7Q"
+                                title="ZARMED PRATIKSHA Bog&#39;ishamol" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="site-container">
+            <div class="footer-inner">
+                <div class="row gx-3">
+                    <div class="col-md-6 order-md-1 order-2">
+                        <div class="footer-left">
+                            <a href="" class="footer-logo">
+                                <img src="https://zarmedpratiksha.uz/backend/web/img/logo.svg" alt="" class="logo-img"
+                                    width="180">
+                            </a>
+                            <p class="footer-left-body text-primary my-3 fw-medium ms-md-0 ms-3">
+                                “<span class="text-uppercase text-primary">zarmed PRATIKSHA Bog'ishamol</span>” – первая
+                                клиника в
+                                Узбекистане, ставшая образцом высочайших стандартов здравоохранения благодаря сочетанию
+                                высококвалифицированных специалистов, новейшего оборудования и современной
+                                инфраструктуры.
+                            </p>
+                            <div class="footer-socials">
+                                <ul
+                                    class="socials d-flex align-items-center justify-content-center justify-content-md-start pb-4">
+                                    <li>
+                                        <a href="https://www.instagram.com/zarmedpratiksha/" target="_blank"
+                                            class="social-link">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.facebook.com/zarmedpratiksha/" target="_blank"
+                                            class="social-link">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/channel/UCGvS2Np6R03scueouVVpF8A"
+                                            target="_blank" class="social-link">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://t.me/zarmedportal" target="_blank" class="social-link">
+                                            <i class="fa-brands fa-telegram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-md-0 mb-4 order-md-2 order-1">
+                        <div class="footer-service text-primary">
+                            <h4 class="text-center">ОТДЕЛЕНИЕ НЕЙРОХИРУРГИИ И ХИРУРГИИ ПОЗВОНОЧНИКА</h4>
+                            <p class="fw-medium"
+                                style="text-align: justify; color: #02030a; font-size: 18px; margin-top: 20px;">
+                                В клинике "ZARMED PRATIKSHA Bog'ishamol" проводится полный комплекс обследования
+                                патологий головного мозга и позвоночника, от цифрового рентгена до реабилитации.
+                                Нейрохирургическое отделение оснащено современным нейрохирургическим и
+                                микронейрохирургическим оборудованием, которое считается единственным в Средней Азии.
+                                Наши профессиональные нейрохирурги, работающие совместно с радиологами, физиотерапевтами
+                                и другими специалистами, гарантируют оптимальную помощь и специализированное лечение в
+                                комфортабельной больничной обстановке.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

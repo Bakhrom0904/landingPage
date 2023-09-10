@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://dev.zarmedpratiksha.uz/backend/web/img/logo.svg" type="image/x-icon">
+    <title>Ortopediya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #283779;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* SITE-CONTAINER */
+        .site-container {
+            width: 88%;
+            margin: 0 auto;
+        }
+
+        .bg-primary,
+        .btn-primary {
+            background-color: var(--primary) !important;
+        }
+
+        .text-primary {
+            color: var(--primary) !important;
+        }
+
+        /* ----- HEADER ----- */
+
+        .header {
+            height: 90px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            background-color: #fff;
+        }
+
+        .header-contact i {
+            font-size: 23px;
+        }
+
+        .header-contact span {
+            font-size: 18px;
+        }
+
+        /*  ---- HERO  -----*/
+
+        .hero {
+            padding-top: 90px;
+        }
+
+        .hero .hero-img {
+            display: block;
+            height: calc(100vh - 90px);
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /*  ---- RECEPTION --- */
+
+        .reception-form .reception-form-title {
+            font-weight: 600;
+        }
+
+        .reception-form input,
+        .reception-form textarea {
+            box-shadow: none !important;
+            padding: 10px 20px;
+            border: 1px solid #eee;
+            background-color: #fbfbfb;
+        }
+
+        /* ----- SERVICES ------  */
+
+        .services-title {
+            font-weight: 600;
+        }
+
+        .services-list .services-item {
+            font-size: 22px;
+            color: #02030a;
+            font-weight: 500;
+        }
+
+        .services-list .services-item:not(:last-child) {
+            margin-bottom: 13px;
+        }
+
+        .services-list .services-item i {
+            font-size: 24px;
+            margin-right: 5px;
+        }
+
+        /* ----- DOCTORS ---- */
+
+        .doctors-inner {
+            background-color: #131c411f;
+            box-shadow: 0 0 20px #28377930;
+            border-radius: 20px;
+            margin-top: 60px;
+        }
+
+        .card-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 10px solid var(--primary);
+        }
+
+        .accordion-item {
+            background-color: transparent !important;
+        }
+
+        .doctors-inner .card .card-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #222;
+        }
+
+        .doctors-inner .card-text {
+            text-align: justify;
+        }
+
+        /* ----- VIDEOS -------- */
+        .videos-inner {
+            background-color: #131c411f;
+            box-shadow: 0 0 20px #28377930;
+            border-radius: 20px;
+        }
+
+        /* ------ FOOTER ---- */
+        .social-link {
+            text-decoration: none;
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border: 1px solid blue;
+            box-shadow: 0 0 10px rgb(183, 183, 228);
+            color: blue;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+
+        /* ------- MEDIA QUERY ------ */
+        @media only screen and (max-width: 900px) {
+            .hero .hero-img {
+                height: calc(40vh - 90px);
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .site-container {
+                width: 94%;
+            }
+
+            .logo-img {
+                width: 150px;
+            }
+
+            .hero .hero-img {
+                width: 95%;
+            }
+        }
+
+        @media only screen and (max-width: 576px) {
+            .services-list .services-item {
+                font-size: 18px;
+            }
+
+            .card-img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+        @media only screen and (max-width: 450px) {
+            .logo-img {
+                width: 130px;
+            }
+
+            .header-contact i {
+                font-size: 20px;
+            }
+
+            .header-contact span {
+                font-size: 16px;
+            }
+
+            .lang-btn {
+                padding: 3px 6px;
+                font-size: 15px;
+            }
+
+            .doctors-inner .card .card-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="site-container">
+            <div class="header__inner d-flex justify-content-between align-items-center">
+                <a href="" class="header__logo d-block">
+                    <img class="logo-img" src="https://zarmedpratiksha.uz/backend/web/img/logo.svg" alt="logo"
+                        width="180">
+                </a>
+                <div class="d-flex align-items-center">
+                    <a href="tel:+998557021063"
+                        class="text-primary text-decoration-none d-flex align-items-center header-contact">
+                        <i class="fa-solid fa-phone-volume me-sm-2 me-1"></i>
+                        <span class="fw-bold">+998 55 702 10 63</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <div class="hero">
+            <div class="site-container">
+                <div class="hero-img-box">
+                    <img src="https://zarmedpratiksha.uz/uploads/landpage/Ortopediya/ortouz.jpg?_t=1657262554"
+                        alt="hero-img" width="100%" height="600" class="hero-img">
+                </div>
+            </div>
+        </div>
+
+        <!--  RECEPTION -->
+        <div class="reception my-5">
+            <div class="site-container">
+                <div class="reception-inner">
+                    <div class="row gx-md-5 gx-0 align-items-center">
+                        <div class="col-md-6">
+                            <div class="reception-media">
+                                <iframe width="560" height="315" class="w-100 d-block"
+                                    src="https://www.youtube.com/embed/9SIoOMSFm8k"
+                                    title="Итоги ушедшего плодотворного 2022 года  для &quot;ZARMED PRATIKSHA Bog&#39;ishamol&quot; ."
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="reception-form-box pt-md-0 pt-5">
+                                <form id="form" class="reception-form">
+                                    <h2 class="reception-form-title w-lg-75 mx-lg-auto text-primary text-center">
+                                        Mutaxassis qabuliga yozilish</h2>
+                                    <input type="text" class="form-control mb-3 mt-4" name="ism" id="ism"
+                                        placeholder="Ism" required>
+                                    <input type="tel" class="form-control mb-3" name="tel" id="tel" placeholder="Tel"
+                                        required>
+                                    <input type="email" class="form-control mb-3" name="email" id="email"
+                                        placeholder="El.pochta">
+                                    <textarea name="message" id="message" class="form-control my-2" placeholder="Xabar"
+                                        required></textarea>
+                                    <button type="submit" id="button"
+                                        class="btn btn-primary w-100 py-2">Yuborish</button>
+                                </form>
+                            </div>
+                            <!-- Formadan pochtaga xabar yuborish uchun script -->
+
+                            <script type="text/javascript"
+                                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                            <script type="text/javascript">
+                                emailjs.init('aYgzAqtKOYy5Utpai')
+                                const btn = document.getElementById('button');
+                                document.getElementById('form')
+                                    .addEventListener('submit', function (event) {
+                                        event.preventDefault();
+                                        btn.value = 'Yuborilmoqda...';
+                                        const serviceID = 'default_service';
+                                        const templateID = 'template_g9jh70b';
+                                        emailjs.sendForm(serviceID, templateID, this)
+                                            .then(() => {
+                                                btn.value = 'Xabar yuborildi';
+                                                alert('Xabaringiz yuborildi');
+                                                document.getElementById("ism").value = '';
+                                                document.getElementById('tel').value = '';
+                                                document.getElementById('email').value = '';
+                                                document.getElementById('message').value = '';
+                                            }, (err) => {
+                                                btn.value = 'Send Email';
+                                                alert(JSON.stringify(err));
+                                            });
+                                    });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ----- SERVICES ------ -->
+        <div class="services pt-4">
+            <div class="site-container">
+                <div class="services-inne">
+                    <h3 class="services-title text-primary mb-5">ORTOPEDIYA-TRAVMATOLOGIYA BO'LIMI XIZMATLARI:</h3>
+                    <div class="services-list-box">
+                        <ul class="services-list">
+                            <li class="services-item">
+                                <i class="fas fa-plus-circle"></i>
+                                Umurtqa pog'onasi jarrohligi, endoskopik, minimal invaziv jarrohliklar va harakatni
+                                saqlash
+                            </li>
+                            <li class="services-item">
+                                <i class="fas fa-plus-circle"></i>
+                                Chanoq-son bo'g'imi jarrohlari va qo'shma jarohatlarda amaliyotlar bajarish
+                            </li>
+                            <li class="services-item">
+                                <i class="fas fa-plus-circle"></i>
+                                Bo'g'imlar almashtirish amaliyoti , kompyuter navigatsiyasi
+                            </li>
+                            <li class="services-item">
+                                <i class="fas fa-plus-circle"></i>
+                                Bolalar ortopediyasi, oyoq va to'piq jarrohligi
+                            </li>
+                            <li class="services-item">
+                                <i class="fas fa-plus-circle"></i>
+                                Maymoq (konservativ/jarrohlik davolash)
+                            </li>
+                            <li class="services-item">
+                                <i class="fas fa-plus-circle"></i>
+                                Suyak va bo'g'imlarning infektsiyasi
+                            </li>
+                            <li class="services-item">
+                                <i class="fas fa-plus-circle"></i>
+                                Son, tizza va yelka bo'g'imlarini endoprotezlash(almashtrish)
+                            </li>
+                            <li class="services-item">
+                                <i class="fas fa-plus-circle"></i>
+                                Yelka va tizza bo'g'imlari artroskopiyasi
+                            </li>
+                            <li class="services-item">
+                                <i class="fas fa-plus-circle"></i>
+                                Yelka artroskopiyasi, masalan Bankart tuzatish, rotator manjet tuzatish, kapsulografiya,
+                                elkama bo'g'imini bo'shatish, akromiyoklavikulyar bo'g'imlarni barqarorlashtirish
+                            </li>
+                            <li class="services-item">
+                                <i class="fas fa-plus-circle"></i>
+                                Yuqori va pastki ekstremitalarning sinishi birlamchi fiksatsiyasi
+                            </li>
+                            <li class="services-item">
+                                <i class="fas fa-plus-circle"></i>
+                                Deformatsiyani tuzatish
+                            </li>
+                            <li class="services-item">
+                                <i class="fas fa-plus-circle"></i>
+                                Umumiy ortopedik muolajalar
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ------ DOCTORS ----- -->
+        <div class="doctors">
+            <div class="site-container">
+                <div class="doctors-inner p-sm-4 p-1">
+                    <h3 class="doctors-title text-center fw-bold text-primary mb-5">Ortopediya va travmatologiya
+                        bo'yicha tajribali shifokorlarimiz
+                    </h3>
+                    <div class="doctors-list">
+                        <div class="row">
+                            <!-- --- Doctor 1 card ----->
+                            <div class="col-md-6">
+                                <div class="doctors-list-item">
+                                    <div class="card bg-transparent border-0">
+                                        <div class="card-img-box text-center">
+                                            <img width="300" height="300"
+                                                src="https://zarmedpratiksha.uz/uploads/landpage/Ikrom.jpg?_t=1656434412"
+                                                class="card-img" alt="doctor-img">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 style="text-transform: capitalize;" class="card-title text-center">
+                                                Allaberdiyev Ikrom Gofurovich</h5>
+                                            <div class="card-text text-primary">
+                                                <div class="accordion bg-transparent">
+                                                    <div class="accordion-item text-primary">
+                                                        <p class="accordion-header">
+                                                            Allaberdiyev Ikrom Gofurovich – travmatolog-ortoped. 2006
+                                                            yilda Samarqand Davlat Tibbiyot Institutining Tibbiyot
+                                                            fakultetini tamomlagan.
+                                                        </p>
+                                                        <div id="collapseOne"
+                                                            class="accordion-collapse collapse m-0 p-0"
+                                                            data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body p-0">
+                                                                2006-2007 yillarda Toshkent shahridagi Respublika
+                                                                Travmatologiya va ortopediya ilmiy-tekshirish instituti
+                                                                klinik ordinaturaning 1-kursida tahsil olgan. 2007-2008
+                                                                yillarda Samarqand Tibbiyot Institutining 2-kurs klinik
+                                                                ordinaturasini tamomlagan. 2010-yildan buyon RRCEMMPda
+                                                                navbatchi travmatolog, keyinroq travmatologiya bo‘limida
+                                                                stajyor lavozimida ishlab kelmoqda. Katta va kichik
+                                                                quvurli suyaklarning metall osteosintezi bo'yicha
+                                                                operatsiyalarni mustaqil ravishda amalga oshiradi.
+                                                                Ya'ni, u zamonaviy BIOSni amalga oshirdi, bilak, elka,
+                                                                tizza, son suyaklarida bajarildi, metall
+                                                                osteosintezining intramedullar, ekstramedullar
+                                                                operatsiyalarini amalga oshiradi.
+                                                            </div>
+                                                        </div>
+                                                        <button class="btn btn-primary" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                            aria-expanded="true" aria-controls="collapseOne">
+                                                            Batafsil
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- --- Doctor 2 card ----->
+                            <div class="col-md-6">
+                                <div class="doctors-list-item">
+                                    <div class="card bg-transparent border-0">
+                                        <div class="card-img-box text-center">
+                                            <img width="300" height="300"
+                                                src="https://zarmedpratiksha.uz/uploads/landpage/Rakshid.jpg?_t=1656436091"
+                                                class="card-img" alt="doctor-img">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 style="text-transform: capitalize;" class="card-title text-center">
+                                                Rakshit Sannegovda</h5>
+                                            <div class="card-text text-primary">
+                                                <div class="accordion bg-transparent">
+                                                    <div class="accordion-item text-primary">
+                                                        <p class="accordion-header">
+                                                            Doktor Rakshit Sannegovda - 16 yillik tajribaga ega bo'lgan maslahatchi, ortoped-jarroh. Hindiston va Buyuk Britaniyada malaka oshirgan.
+                                                        </p>
+                                                        <div id="collapseTwo"
+                                                            class="accordion-collapse collapse m-0 p-0"
+                                                            data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body p-0">
+                                                                Turli umumiy ortopedik muolajalardan tashqari, ilg'or yelka va tizza artroskopiyasi, son va tizza artroplastikasiga ixtisoslashgan. Turli mamlakatlarda, jumladan, Buyuk Britaniya, BAA va Ummonda ishlagan. Muntazam ravishda xalqaro konferensiyalarda qatnashadi, joriy davolash protokollarini kuzatib boradi.
+                                                                <ul>
+                                                                    <li>
+                                                                        <i class="fas fa-plus-circle"></i>
+                                                                        Yuqori va pastki ekstremitalarning sinishi birlamchi fiksatsiyasi.
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fas fa-plus-circle"></i>
+                                                                        Deformatsiyani tuzatish.
+                                                                    </li>
+                                                                    <li>
+                                                                        <i class="fas fa-plus-circle"></i>
+                                                                        Yelka artroskopiyasi (Bankart tuzatish, rotator manjetni tuzatish, kapsulorafiya, yelkani ochish, akromioklavikulyar bo'g'imlarni barqarorlashtirish).
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <button class="btn btn-primary" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                            aria-expanded="true" aria-controls="collapseTwo">
+                                                            Batafsil
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- --- Doctor 3 card----->
+                            <div class="col-md-6">
+                                <div class="doctors-list-item">
+                                    <div class="card bg-transparent border-0">
+                                        <div class="card-img-box text-center">
+                                            <img width="300" height="300"
+                                                src="https://zarmedpratiksha.uz/uploads/landpage/Verma.jpg?_t=1656563647"
+                                                class="card-img" alt="doctor-img">
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 style="text-transform: capitalize;" class="card-title text-center">
+                                                Rajesh Verma</h5>
+                                            <div class="card-text text-primary">
+                                                <div class="accordion bg-transparent">
+                                                    <div class="accordion-item text-primary">
+                                                        <p class="accordion-header">
+                                                            Doktor Rajesh Verma o'zining 25 yillik klinik tajribasida o'zini afsonaviy jarrohga aylantirdi va murakkab travmalar, suyaklar, bo'g'imlar va umurtqa pog'onasi kasalliklarini davolashda birinchi o'rinni egallaydi.
+                                                        </p>
+                                                        <div id="collapseThree"
+                                                            class="accordion-collapse collapse m-0 p-0"
+                                                            data-bs-parent="#accordionExample">
+                                                            <div class="accordion-body p-0">
+                                                                U yillar davomida umurtqa pog'onasi jarrohligi bo'yicha mutaxassis maqomiga ega bo'ldi va hozirda Hindistonda bir oyda 30-50 ta umurtqa pog'onasi operatsiyalarini amalga oshiruvchi sanoqli yetakchi jarrohlardan biri hisoblanadi. O'z karerasida u 23000 dan ortiq jarrohlik ishlarining bir qismi bo'lgan. Shaxsan Doktor Verma 13000 dan ortiq operatsiyalarni muvaffaqiyatli o'tkazdi, shu jumladan umurtqa pog'onasi operatsiyalarining barcha turlari, bo'g'imlarni almashtirish va murakkab travma operatsiyalari. 2009-yil oktabrdan 2018-yil yanvargacha ortopediya va umurtqa pog'onasi jarrohligi bo'yicha direktor va bosh direktor sifatida ishlagan! Hozirgi kunda ZARMED PRATIKSHA Bog`Ishamol klinikasida ishlab kelmoqda.
+                                                            </div>
+                                                        </div>
+                                                        <button class="btn btn-primary" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                            aria-expanded="true" aria-controls="collapseThree">
+                                                            Batafsil
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ----- VIDEOS ---- -->
+        <div class="videos my-5">
+            <div class="site-container">
+                <div class="videos-inner p-md-4 p-2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <iframe class="w-100 rounded" height="300" src="https://www.youtube.com/embed/Et-s1maL64k"
+                                title="Доктор Ракшит  —  консультант-хирург-ортопед из Индии, в клинике &quot;ZARMED PRATIKSHA Bog'ishamol&quot;"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen=""></iframe>
+                        </div>
+                        <div class="col-md-6 mt-md-0 mt-3">
+                            <iframe class="w-100 rounded" height="300" src="https://www.youtube.com/embed/bAYNmG6yUmM"
+                                title="Jarrohlik amaliyotini Hindistonlik ortoped-jarroh Doktor Rakshit Sannegovda amalga oshirdi."
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="site-container">
+            <div class="footer-inner">
+                <div class="row gx-3">
+                    <div class="col-md-6 order-md-1 order-2">
+                        <div class="footer-left">
+                            <a href="" class="footer-logo">
+                                <img src="https://zarmedpratiksha.uz/backend/web/img/logo.svg" alt="" class="logo-img"
+                                    width="180">
+                            </a>
+                            <p class="footer-left-body text-primary my-3 fw-medium ms-md-0 ms-3">
+                                “<span class="text-uppercase text-primary">zarmed PRATIKSHA Bog'ishamol</span>” O'zbekistondagi birinchi klinika bo'lib, u yuqori malakali mutaxassislar, eng so'nggi jihozlar va zamonaviy infratuzilmaning uyg'unligi tufayli eng yuqori sog'liqni saqlash standartlari namunasiga aylangan.
+                            </p>
+                            <div class="footer-socials">
+                                <ul
+                                    class="socials d-flex align-items-center justify-content-center justify-content-md-start pb-4">
+                                    <li>
+                                        <a href="https://www.instagram.com/zarmedpratiksha/" target="_blank"
+                                            class="social-link">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.facebook.com/zarmedpratiksha/" target="_blank"
+                                            class="social-link">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/channel/UCGvS2Np6R03scueouVVpF8A"
+                                            target="_blank" class="social-link">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://t.me/zarmedportal" target="_blank" class="social-link">
+                                            <i class="fa-brands fa-telegram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-md-0 mb-4 order-md-2 order-1">
+                        <div class="footer-service text-primary">
+                            <h4 class="text-center">ORTOPEDIYA-TRAVMATOLOGIYA BO'LIMI</h4>
+                            <p class="fw-medium"
+                                style="text-align: justify; color: #02030a; font-size: 18px; margin-top: 20px;">
+                                Zarmed Pratiksha Bog'ishamol klinikasining travmatologiya-ortopediya, bo'g'im artroplastikasi va orqa miya jarrohligi bo'limida kattalar va bolalarga zamonaviy yordam ko'rsatilmoqda. Bizning klinik tajribamiz ilg'or texnologiyalar bilan birgalikda keng ko'lamli ortopedik sharoitlar va jarohatlar bo'yicha yuqori darajadagi xizmatlarni taqdim etishga imkon beradi. Bizning travmatologiya-ortopediya bo'limi o'ziga xos ortopedik kasalliklarni tashxislash va davolashga ixtisoslashgan eng yaxshi xalqaro mutaxassislarning ko'nikmalari va tajribasini birlashtiradi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

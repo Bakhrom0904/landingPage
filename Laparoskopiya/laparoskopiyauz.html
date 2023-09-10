@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="icon" href="https://dev.zarmedpratiksha.uz/backend/web/img/logo.svg" type="image/x-icon">
+    <title>Laparoskopiya</title>
+    <style>
+        .sarlavha {
+            color: #283779;
+            font-size: 20pt;
+            font-weight: 600;
+
+
+        }
+
+        .doktorlar {
+            color: #283779;
+            font-size: 20pt;
+            font-weight: 650;
+            text-align: center;
+
+        }
+
+        .matn {
+            color: #283779;
+            font-size: 15pt;
+            font-weight: 450;
+        }
+
+        .matn2 {
+            color: #02030a;
+            font-size: 16pt;
+            font-weight: 550;
+        }
+
+        .main__title {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            background-color: rgba(15, 15, 150, 0.646);
+            font-weight: 400;
+        }
+
+        .main__icon {
+            font-size: 2rem;
+        }
+
+        .main__list {
+            list-style-type: none;
+            padding: 15px 0;
+            font-size: 20px;
+        }
+
+        .main__list li>p {
+            color: rgba(15, 15, 150, 0.646);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+
+        .main__icon {
+            margin-right: 10px;
+        }
+
+        @media (min-width:768px) {
+            .main__list {
+                font-size: 24px;
+            }
+
+            .main__title {
+                font-weight: 500;
+            }
+        }
+
+        @media (min-width:992px) {
+            .main__title {
+                font-weight: 700;
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (min-width:1200px) {
+            .main__list {
+                font-size: 26px;
+            }
+
+            .main__title {
+                font-size: 2rem;
+            }
+
+        }
+
+        .img-title {
+            color: #283779;
+            text-align: left;
+        }
+
+        @media (max-width:900px) {
+            .main__img {
+                width: 100%;
+                /* height: 450px; */
+                margin: 0 auto;
+                object-fit: cover;
+            }
+
+            .img-title {
+                padding-top: 2rem;
+            }
+        }
+
+
+
+        @media (max-width: 600px) {
+            .main_header {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+            }
+
+            .logo {
+                margin-bottom: 20px;
+            }
+
+
+            .img-title {
+                text-align: center;
+            }
+
+            .main__img {
+                width: 95%;
+                margin: 0 auto;
+                object-fit: cover;
+            }
+        }
+
+
+
+        .header_info {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 32px;
+            color: rgb(34, 48, 97);
+        }
+
+
+        /* Navbar styles */
+        #navbar {
+            position: relative;
+            margin-bottom: 80px;
+            background-color: #fff;
+        }
+
+        #navbar .navbar_container {
+            width: 100%;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #fff;
+            z-index: 4;
+            padding: 20px 0;
+        }
+
+        #navbar .navbar_logo {}
+
+        #navbar .navbar_contact {}
+
+        #navbar .navbar_icon {
+            font-size: 1.2rem;
+        }
+
+        #navbar .navbar_logo_img {
+            width: 140px;
+        }
+
+        @media(max-width:576px) {
+            #navbar .navbar_container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            #navbar {
+                position: relative;
+                margin-bottom: 60px;
+                background-color: #fff;
+            }
+
+        }
+
+        @media(min-width:576px) {
+            #navbar .navbar_icon {
+                font-size: 1.8rem;
+            }
+
+            #navbar .navbar_logo_img {
+                width: 200px;
+            }
+
+            #navbar {
+                position: relative;
+                margin-bottom: 60px;
+                background-color: #fff;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar  qismi  -->
+
+    <div id="navbar">
+        <div class="navbar_container container" style="min-width:95%;">
+            <div class="navbar_logo">
+                <a href="https://zarmedpratiksha.uz/">
+                    <img class="navbar_logo_img" src="https://zarmedpratiksha.uz/backend/web/img/logo.svg"
+                        alt="rasm yuklanmoqda">
+                </a>
+            </div>
+            <div class="navbar_contact">
+                <a href="tel:+998557021063" class="text-decoration-none" style="color:#283779 ">
+                    <i class="fa-solid fa-phone-volume navbar_icon"></i>
+                    <span class="fw-bold navbar_number" style="font-size: 1.2rem;">+998 55 702 10 63</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+
+    <main>
+
+        <div class="container" style="min-width:95%;">
+
+            <!-- Glavniy rasm -->
+
+            <div class="row">
+                <div class="col-12 mt-3">
+                    <img src="https://www.zarmedpratiksha.uz/uploads/landpage/Laparoskopiya/Laparoskopiya2.jpg?_t=1675247621"
+                        alt="Rasm yuklanmoqda" width="97%" style="object-fit:cover;">
+                </div>
+            </div>
+
+            <!-- Bo'lim xizmatlari haqida malumot -->
+
+            <div class="row my-5">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 p-3">
+                    <h2 style="color: #283779;text-transform: uppercase;font-weight: 900;">LAPAROSKOPIYA BO'LIMI</h2>
+                    <p class="matn2" style="color: black;">
+                    <p class="matn2" style="color:black"><span
+                            style="color: #F19035;font-weight: 900;">LAPAROSKOPIYA</span> - bu zamonaviy jarrohlik usuli
+                        bo'lib, qorin old devoridagi kichik teshiklar (teshilishlar) orqali qorin bo'shlig'i yoki tos
+                        bo'shlig'ining ichki organlarida operatsiyalarni bajarishdan iborat.<br>
+                        <span style="color: #F19035;font-weight: 900;">Laparoskopiya va torakoskopiya</span> usulining
+                        afzalliklari past travma, qisqa tiklanish davri va operatsiyadan keyingi qo'pol chandiqlarning
+                        yo'qligi.<br>
+                    <p class="matn2"><span style="color:#283779 ;font-weight: 700;">LAPAROSKOPIYA VA TORAKOSKOPIYA UCHUN
+                            KO'RSATMALAR:</span><br></p>
+                    </p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Ko'krak qafasi, qorin bo'shlig'i va
+                        ko'krak organlari, qorin bo'shlig'i va tos a'zolarining o'tkir va surunkali kasalliklari</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Toshlar, kistalar va neoplazmalar
+                        mavjudligi</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Ortiqcha vazn (yoki semizlik)</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Qandli diabet</p>
+                    </p>
+                </div>
+                <div
+                    class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex flex-column justify-content-center">
+                    <p class="matn2"><span style="color:#283779 ;font-weight: 900;"> "ZARMED PRATIKSHA Bog'ishamol"
+                            KLINIKASIDA O'TKAZADIGAN ENDOSKOPIK JARROHLIKLAR RO'YXATI:</span></p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Diagnostik laparoskopiya</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Laparoskopik xoletsistektomiya</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Diagnostik torakoskopiya
+                        Bullyoz o'pka kasalligi uchun torakoskopik lobektomiya</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Jigar, taloq, qorinning laparoskopik
+                        sistektomiyasi</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Fundoplikatsiya bilan laparoskopik
+                        krurorafiya (hiatal churra uchun jarrohlik)</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Laparoskopik hernioplastika (kasos
+                        churrasi, son va kindik churrasi)</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Laparoskopik splenektomiya</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Laparoskopik appendektomiya</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Qorin bo'shlig'i saratoni, onkologik
+                        jarrohlik</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Distal pankreatomiya (oshqozon osti bezi
+                        kistalari)</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Raynaud kasalligi uchun torakoskopik
+                        simpatektomiya</p>
+                </div>
+            </div>
+            <div class="row my-5">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7 d-flex flex-column justify-content-center">
+                    <p class="matn2"><span style="color: #F19035;font-weight: 900;">GINEKOLOGIK</span><span
+                            style="color:#283779 ;font-weight: 900;"> JARROHLIK:</span></p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Laparoskopik - tuxumdon kistektomiyasi</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Laparoskopik ooferektomiya</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Bepushtlik uchun gidrotubatsiya bilan
+                        laparoskopik stomatoplastika</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Laparoskopik koagulyatsiya va fallop
+                        naychalarini kesish</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Bachadondan laparoskopik miyomektomiya</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Laparoskopik histerektomiya</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Laparoskopik tubektomiya</p>
+                    <br>
+                </div>
+
+                <!-- Formani boshlanishi -->
+                 
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 d-flex flex-column justify-content-center">
+                    <h2 style="color: #283779;font-weight: 600;text-align: center;"> Mutaxassis qabuliga yozilish</h2>
+                    <div>
+                        <form id="form">
+                            <input type="text" class="form-control my-2" name="ism" id="ism"  placeholder="Ism" required>
+                            <input type="tel" class="form-control my-2" name="tel" id="tel"  placeholder="Tel" required>
+                            <input type="email" class="form-control my-2" name="email" id="email"  placeholder="El.pochta">
+                            <textarea name="message" id="message" class="form-control my-2" placeholder="Xabar" required></textarea>
+                            <input type="submit" id="button" class=" form-control" style="background-color: #283779;color: white;" value="Yuborish">
+                        </form>
+                    </div>
+                </div> 
+
+                <!-- Formadan pochtaga xabar yuborish uchun script -->
+                
+                <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                <script type="text/javascript">
+                    emailjs.init('aYgzAqtKOYy5Utpai')
+                    const btn = document.getElementById('button');
+            document.getElementById('form')
+            .addEventListener('submit', function(event) {
+            event.preventDefault();
+            btn.value = 'Yuborilmoqda...';
+            const serviceID = 'default_service';
+            const templateID = 'template_g9jh70b';
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                btn.value = 'Xabar yuborildi';
+                alert('Xabaringiz yuborildi');
+                    document.getElementById("ism").value = '';
+                    document.getElementById('tel').value = '';
+                    document.getElementById('email').value = '';
+                    document.getElementById('message').value = '';
+                }, (err) => {
+                btn.value = 'Send Email';
+                alert(JSON.stringify(err));
+                });
+            });
+                  </script>
+            </div>
+
+            <!-- Doktorlar haqida malumot -->
+
+            <div class="row my-3" style="background-color:#131c411f; box-shadow: 0px 0px 20px #28377930;">
+                <div class="col-12 row d-flex justify-content-center align-items-center">
+                    <div class="col-12 d-flex py-3 justify-content-center align-items-center">
+                        <p class="doktorlar">Laparoskopiya bo'yicha tajribali shifokorlarimiz</p>
+                        <br>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex flex-column">
+                        <div class="w-100 d-flex justify-content-center align-items-center">
+                            <img src="https://zarmedpratiksha.uz/uploads/landpage/Endoskopiya/Tojiyev.jpg?_t=1657701177"
+                                style="width: 300px; height: 300px;border-radius: 50%; object-fit:cover;border: 10px solid #283779;"
+                                alt="">
+                        </div>
+                        <div class="w-100 d-flex flex-column justify-content-center align-items-center p-4">
+                            <h3><span style="text-transform: capitalize;">Xodiyev Zafar Tojiyevich </span></h3>
+                            <h6 style="line-height:27px ;">
+                                <p style="color: #283779;">
+                                    <span style="text-transform: capitalize;">Zafar Tojiyevich</span> – vrach-xirurg.
+                                    <span style="text-transform: capitalize;">Samarqand Davlat Tibbiyot
+                                        Instituning</span> davolash ishlari fakultetini 2007 yilda tamomlagan.
+                                    2007-2009 yillarda <span style="text-transform: capitalize;">Respublika Shoshilinch
+                                        Tibbiy Yordam Markazi Samarqand</span> filialida «<span
+                                        style="text-transform: capitalize;">Umumiy</span> xirurgiya” yo'nalishida klinik
+                                    ordinaturada o'qib tamomlagan.
+                                    2011 yildan <span style="text-transform: capitalize;">Samarqand</span> tuman
+                                    tibbiyot birlashmasida navbatchi vrach: xirurg vazifasida ishlab kelgan.
+                                    2021 yil iyul oyidan hozirgi kungacha <span
+                                        style="text-transform: capitalize;">Zarmed Pratiksha</span> klinikasiga xirurg
+                                    lavozimida ishlab kelmoqda. <span
+                                        style="text-transform: capitalize;">Ambulator</span>, shoshilinch ambulator
+                                    birinchi xirurgik tibbiy yordam va shoshilinch operatsiyalarni bajaradi. <span
+                                        style="text-transform: capitalize;">Hozirda</span> konservativ, miniinvaziv
+                                    xirurgik davolashning zamonoviy usullari bilan shug'ullanib kelmoqda.
+                                </p>
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex flex-column">
+                        <div class="w-100 d-flex justify-content-center align-items-center">
+                            <img src="https://zarmedpratiksha.uz/uploads/landpage/Endoskopiya/Sharma-1.jpg?_t=1657701177"
+                                style="width: 300px; height: 300px;border-radius: 50%; object-fit:cover;border: 10px solid #283779;"
+                                alt="">
+                        </div>
+                        <div class="w-100 d-flex flex-column justify-content-center align-items-center p-4 ">
+                            <h3><span style="text-transform: capitalize;">Dharmender Sharma </span></h3>
+                            <h6 style="line-height:27px ;">
+                                <p style="color: #283779;">
+                                    <span style="text-transform: capitalize;">Doktor Dharmender Sharma</span>
+                                    laparoskopik, oshqozon-ichak va bariatrik (vazn yo'qotish jarrohligi) bo'yicha 22
+                                    yillik tajribaga ega.
+                                    <span style="text-transform: uppercase;">BDS, PGIMS R</span>ohtak. <span
+                                        style="text-transform: capitalize;">U Medantada</span> 11 yil ishlagan - <span
+                                        style="text-transform: capitalize;">The Medicity Gurgaon (GI,
+                                        Laparoskopik</span> va Bariatrik jarrohlik bo'limi) <span
+                                        style="text-transform: capitalize;">Doktor Dharmender Sharma MAX</span>
+                                    kasalxonasida, <span style="text-transform: capitalize;">Saket, Dehlida</span>
+                                    jarrohlik bo'yicha ta'limni davom ettirgan.
+                                    <span style="text-transform: capitalize;">Doktor Dharmender Sharma</span> dalillarga
+                                    asoslangan tibbiyot va <span style="text-transform: uppercase;">ERAS</span>
+                                    (jarrohlikdan keyin yaxshilangan tiklanish) protokollariga amal qiladi. <span
+                                        style="text-transform: capitalize;">Shunday</span> qilib, barcha bemorlar
+                                    qisqaroq kasalxonada qolish bilan xalqaro standartlarga muvofiq eng yangi tibbiy
+                                    boshqaruvni oladilar.
+                                    <span style="text-transform: capitalize;">Doktor Dharmender Sharma</span>,
+                                    shuningdek, <span style="text-transform: uppercase;">UG & PG T</span>ibbiyot ta'limi
+                                    bo'yicha o'qituvchilik tajribasiga ega.
+                                </p>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Youtube videolar -->
+
+            <div class="row" style="background-color:#131c411f; box-shadow: 0px 0px 20px #28377930;">
+                <div class="col-12 row w-100">
+                    <div
+                        class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex justify-content-center flex-column">
+                        <iframe style="width: 95% ; margin:5px auto;" height="315"
+                            src="https://www.youtube.com/embed/WFrQ_97HfDY" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div
+                        class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex justify-content-center flex-column">
+                        <iframe style="width: 95%; margin:5px auto;" height="315"
+                            src="https://www.youtube.com/embed/3IYMeFYay7Q" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer qismi -->
+
+        <footer class="footer py-5 m-0 border-top" style=" border:#283779;min-width:100% ;">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                        <a href="https://zarmedpratiksha.uz/">
+                            <img width="200px" src="https://zarmedpratiksha.uz/backend/web/img/logo.svg"
+                                alt="rasm topilmadi">
+                        </a>
+                        <h6 style="line-height:25px ;">
+                            <p class="mt-3 mb-1" style="color:#283779;">
+                                “<span style="text-transform: uppercase;">ZARMED PRATIKSHA</span> <span
+                                    style="text-transform: capitalize;">Bog'ishamol” O'zbekistondagi</span> birinchi
+                                klinika bo'lib,
+                                u yuqori malakali mutaxassislar,
+                                eng so'nggi jihozlar va zamonaviy infratuzilmaning uyg'unligi
+                                tufayli eng yuqori sog'liqni saqlash standartlari namunasiga aylangan.
+                            </p>
+                        </h6>
+                       <div class="">
+                            <ul class="social-links-a square-link list-unstyled d-flex flex-row">
+                                <li class="m-2">
+                                    <a class="btn btn-primary d-flex justify-content-center align-items-center"
+                                        style="color:blue;background:white;width:30px; height:30px;border-radius: 50%;"
+                                        target="_blank" href="https://www.instagram.com/zarmedpratiksha/">
+                                        <i class="fa-brands fa-instagram"></i></a>
+                                </li>
+                                <li class="m-2">
+                                    <a class="btn btn-primary d-flex justify-content-center align-items-center"
+                                        style="color:blue;background:white;width:30px; height:30px;border-radius: 50%;"
+                                        target="_blank" href="https://www.facebook.com/zarmedpratiksha/"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li class="m-2">
+                                    <a class="btn btn-primary d-flex justify-content-center align-items-center"
+                                        style="color:blue;background:white;width:30px; height:30px;border-radius: 50%;"
+                                        target="_blank" href="https://www.youtube.com/channel/UCGvS2Np6R03scueouVVpF8A"><i
+                                        class="fab fa-youtube"></i></a>
+                                </li>
+                                <li class="m-2">
+                                    <a class="btn btn-primary d-flex justify-content-center align-items-center"
+                                        style="color:blue;background:white;width:30px; height:30px;border-radius: 50%;"
+                                        target="_blank"
+                                        href="https://t.me/zarmedportal"><i class="fa-brands fa-telegram"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-7 col-xl-7 col-xxl-7">
+                    </div>
+                </div>
+        </footer>
+    </main>
+</body>
+
+</html>

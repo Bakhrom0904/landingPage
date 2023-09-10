@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="icon" href="https://dev.zarmedpratiksha.uz/backend/web/img/logo.svg" type="image/x-icon">
+    <title>Гинекология</title>
+    <style>
+        .sarlavha {
+            color: #283779;
+            font-size: 20pt;
+            font-weight: 600;
+
+        }
+
+        .doktorlar {
+            color: #283779;
+            font-size: 20pt;
+            font-weight: 650;
+            text-align: center;
+
+        }
+
+        .matn {
+            color: #283779;
+            font-size: 15pt;
+            font-weight: 450;
+        }
+
+        .matn2 {
+            color: #02030a;
+            font-size: 18pt;
+            font-weight: 700;
+        }
+
+        .main__title {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            background-color: rgba(15, 15, 150, 0.646);
+            font-weight: 400;
+        }
+
+        .main__icon {
+            font-size: 2rem;
+        }
+
+        .main__list {
+            list-style-type: none;
+            padding: 15px 0;
+            font-size: 20px;
+        }
+
+        .main__list li>p {
+            color: rgba(15, 15, 150, 0.646);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+
+        .main__icon {
+            margin-right: 10px;
+        }
+
+        .call_center {
+            text-align: right;
+        }
+
+        @media (min-width:768px) {
+            .main__list {
+                font-size: 24px;
+            }
+
+            .main__title {
+                font-weight: 500;
+            }
+        }
+
+        @media (min-width:992px) {
+            .main__title {
+                font-weight: 700;
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (min-width:1200px) {
+            .main__list {
+                font-size: 26px;
+            }
+
+            .main__title {
+                font-size: 2rem;
+            }
+
+        }
+
+        .img-title {
+            color: #283779;
+            text-align: left;
+        }
+
+        @media (max-width:900px) {
+            .main__img {
+                width: 100%;
+                /* height: 450px; */
+                margin: 0 auto;
+                object-fit: cover;
+            }
+
+            .img-title {
+                padding-top: 2rem;
+            }
+        }
+
+
+
+        @media (max-width: 600px) {
+
+
+            .logo {
+                margin-bottom: 20px;
+            }
+
+
+            .img-title {
+                text-align: center;
+            }
+
+            .main__img {
+                width: 95%;
+                margin: 0 auto;
+                object-fit: cover;
+            }
+
+            .logo-img {
+                width: 150px
+            }
+
+            .fix-nav {
+                padding: 0 1rem;
+            }
+
+            .call_center {
+                flex-flow: column nowrap;
+                justify-content: flex-start;
+            }
+
+            .btn_width {
+                width: 100%;
+            }
+        }
+
+
+
+        .header_info {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 32px;
+            color: rgb(34, 48, 97);
+        }
+
+        .fix-nav {
+            left: 0;
+            right: 0;
+            top: 0;
+            padding: 0 2rem;
+            background: #fff;
+            z-index: 999;
+        }
+
+
+        .btn_width {
+            width: 25%;
+        }
+
+        @media screen and (max-width:767px) {
+            .logo-img {
+                width: 150px
+            }
+
+            .fix-nav {
+                padding: 0 1rem;
+            }
+
+            .call_center {
+                flex-flow: column nowrap;
+                justify-content: flex-end;
+                display: flex;
+                gap: 1rem;
+            }
+
+            .regis {
+                padding-right: 0.5rem;
+            }
+
+            .btn_width {
+                width: 50%;
+            }
+        }
+
+        /* Navbar styles */
+        #navbar {
+            position: relative;
+            margin-bottom: 80px;
+            background-color: #fff;
+        }
+
+        #navbar .navbar_container {
+            width: 100%;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #fff;
+            z-index: 4;
+            padding: 20px 0;
+        }
+
+        #navbar .navbar_logo {}
+
+        #navbar .navbar_contact {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #navbar .navbar_icon {
+            font-size: 1.2rem;
+        }
+
+        #navbar .navbar_logo_img {
+            width: 140px;
+        }
+
+        @media(max-width:576px) {
+            #navbar .navbar_container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+        @media(min-width:576px) {
+            #navbar .navbar_icon {
+                font-size: 1.8rem;
+            }
+
+            #navbar .navbar_logo_img {
+                width: 200px;
+            }
+
+            #navbar .navbar_contact {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+     <!-- Navbar  qismi  -->
+     
+    <div id="navbar">
+        <div class="navbar_container container" style="min-width:95%;">
+            <div class="navbar_logo">
+                <a href="https://zarmedpratiksha.uz">
+                    <img class="navbar_logo_img" src="https://zarmedpratiksha.uz/backend/web/img/logo.svg"
+                        alt="rasm yuklanmoqda">
+                </a>
+            </div>
+            <div class="navbar_contact">
+                <a href="tel:+998557021063" class="text-decoration-none" style="color:#283779 ">
+                    <i class="fa-solid fa-phone-volume navbar_icon" style="font-size: 1.8rem;"></i>
+                    <span class="fw-bold navbar_number" style="font-size: 1.2rem;">+998 55 702 10 63</span>
+                </a>
+                <a href="https://zarmedpratiksha.uz/page?u=ginekologiya" target="_blank" style="padding:5px ;">
+                    <button class="btn btn-light" style="background-color: #283779 ;color: white;">O`zbekcha</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="container" style="min-width:95%;">
+
+             <!-- Glavniy rasm -->
+
+             <div class="row mt-5">
+                <div class="col-12 mt-3">
+                    <img src="https://www.zarmedpratiksha.uz/uploads/landpage/Ginekologiya/Ginekologiya.jpg?_t=1675146100"
+                        alt="Rasm yuklanmoqda" width="97%" style="object-fit:cover;">
+                </div>
+            </div>
+
+            <!-- Bo'lim xizmatlari haqida malumot -->
+
+            <div class="row my-5">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8 p-3">
+                    <br>
+                    <h3 style="color: #F19035;font-weight: 700;text-transform: uppercase;">УСЛУГИ ОТДЕЛЕНИЯ АКУШЕРСТВА И ГИНЕКОЛОГИЯ:</h3>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Оперативная гинекология</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Лечение гинекологических заболеваний</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Планирование беременности </p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Ведение беременности</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Восстановление после родов</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Процедуры</p>
+                    <p class="matn2">&nbsp;&nbsp;<i class="fa fa-check-square" aria-hidden="true"></i> &nbsp;Комплексная программа Здоровье</p>
+                    <p class="matn2">&nbsp;&nbsp;<i class="fa fa-check-square" aria-hidden="true"></i> &nbsp;Диагностика</p>
+                    <p class="matn2">&nbsp;&nbsp;<i class="fa fa-check-square" aria-hidden="true"></i> &nbsp;Гистеросальпингография (ГСГ)</p>
+                    <h3 style="color: #F19035;font-weight: 700;text-transform: uppercase;">ЛАПАРОСКОПИЧЕСКИЕ ГИНЕКОЛОГИЧЕСКИЕ ОПЕРАЦИИ:</h3>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Лапароскопическая - цистэктомия из
+                        яичников</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Лапароскопия овариоэктомия</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Лапароскопическая коагуляция и
+                        клипирование маточных труб</p>
+
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Лапароскопическая миомэктомия из матки</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Лапароскопическая гистерэктомия</p>
+                    <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Лапароскопическая тубэктомия</p>
+                </div>
+
+                <!-- Formani boshlanishi -->
+                 
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 d-flex flex-column justify-content-center">
+                    <h2 style="color: #283779;text-transform: uppercase;font-weight: 600;text-align: center;"> ЗАПИСЬ НА ПРИЁМ К СПЕЦИАЛИСТУ</h2>
+                    <div>
+                        <form id="form">
+                            <input type="text" class="form-control my-2" name="ism" id="ism"  placeholder="Имя" required>
+                            <input type="tel" class="form-control my-2" name="tel" id="tel"  placeholder="Tел" required>
+                            <input type="email" class="form-control my-2" name="email" id="email"  placeholder="Эл.почта">
+                            <textarea name="message" id="message" class="form-control my-2" placeholder="Сообщение" required></textarea>
+                            <input type="submit" id="button" class=" form-control" style="background-color: #283779;color: white;" value="Отправить">
+                        </form>
+                    </div>
+                </div> 
+                
+                  <!-- Formadan pochtaga xabar yuborish uchun script -->
+
+                <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                <script type="text/javascript">
+                    emailjs.init('aYgzAqtKOYy5Utpai')
+                    const btn = document.getElementById('button');
+            document.getElementById('form')
+            .addEventListener('submit', function(event) {
+            event.preventDefault();
+            btn.value = 'Отправка...';
+            const serviceID = 'default_service';
+            const templateID = 'template_g9jh70b';
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                btn.value = 'Отправил';
+                alert('Сообщение было отправлено');
+                    document.getElementById("ism").value = '';
+                    document.getElementById('tel').value = '';
+                    document.getElementById('email').value = '';
+                    document.getElementById('message').value = '';
+                }, (err) => {
+                btn.value = 'Send Email';
+                alert(JSON.stringify(err));
+                });
+            });
+                  </script>
+            </div>
+
+                 <!-- Doktorlar haqida malumot -->
+
+            <div class="row my-3" style="background-color:#131c411f; box-shadow: 0px 0px 20px #28377930;">
+                    <h3 style="color: #283779;text-transform: uppercase;font-weight: 700;font-size: 25pt;text-align: center;">ЭКСПЕРТЫ
+                        ОТДЕЛЕНИЯ</h3>
+                    <br>
+                <div class="col-12 row d-flex justify-content-center align-items-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex flex-column">
+                        <div class="w-100 d-flex justify-content-center align-items-center">
+                            <img src="https://zarmedpratiksha.uz/uploads/landpage/Ginekologiya/Farida.jpg?_t=1658490607"
+                                style="width: 300px; height: 300px;border-radius: 50%; object-fit:cover;border: 10px solid #283779;"
+                                alt="">
+                        </div>
+                        <div class="w-100 d-flex flex-column justify-content-center align-items-center p-4">
+                            <h3><span style="text-transform: capitalize;">Турдиева Азиза Латифовна </span></h3>
+                            <h6 style="line-height:27px ;">
+                                <p style="color: #283779;">
+                                    <span style="text-transform: capitalize;">Турдиева Азиза</span> – врач клиники <span
+                                        style="text-transform: uppercase;">ZARMED PRATIKSHA B</span>og'ishamol,
+                                    акушер-гинеколог высшей категории со стажем работы более 30 лет.
+                                    <span style="text-transform: capitalize;">Азиза Латифовна</span> лечит женское
+                                    бесплодие, <span style="text-transform: uppercase;">TORCH</span>-инфекции,
+                                    гормональные нарушения.
+                                    <span style="text-transform: capitalize;">Оперирует</span> пациенток при выпадении
+                                    матки, делает пластику влагалища. <span
+                                        style="text-transform: capitalize;">Проводит</span>
+                                    консервативное и оперативное лечение заболеваний.
+                                    <span style="text-transform: capitalize;">Когда</span> что-то не так со здоровьем –
+                                    это не повод для паники. <span style="text-transform: capitalize;">Нужно</span> лишь
+                                    обратиться к
+                                    квалифицированному специалисту. <span
+                                        style="text-transform: capitalize;">Опыт</span> профессионалов для вашего
+                                    здоровья – в клинике
+                                    <span style="text-transform: uppercase;">ZARMED PRATIKSHA B</span>og'ishamol!
+                                </p>
+                            </h6>
+                        </div>
+                    </div>
+                    <div
+                        class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex justify-content-center flex-column">
+                        <div class="w-100 d-flex justify-content-center align-items-center" style="">
+                            <img src="https://zarmedpratiksha.uz/uploads/landpage/Ginekologiya/Aziza.jpg?_t=1658490607"
+                                style="width: 300px; height: 300px;border-radius: 50%; object-fit:cover;border: 10px solid #283779;"
+                                alt="">
+                        </div>
+                        <div class="w-100 d-flex flex-column align-items-center p-4">
+                            <h3><span style="text-transform: capitalize;"> Ахтамова Фарида Салохитдиновна </span>
+                            </h3>
+                            <h6 style="line-height:25px ;">
+                                <p style="color:#283779;">
+                                    <span style="text-transform: capitalize;">Фарида Салохитдиновна</span> –
+                                    врач, акушер-гинеколог высшей категории с
+                                    37-летним стажем работы.<br>
+                                    <span style="text-transform: capitalize;">В</span> 1981 году окончила <span
+                                        style="text-transform: capitalize;">Самаркандский медицинский институт .
+                                        После</span> прохождения
+                                    ординатуры, с 1983 по 2021 г – заместитель главного врача в <span
+                                        style="text-transform: capitalize;">Самаркандском</span> городском
+                                    роддоме №2.<br> <span style="text-transform: capitalize;">С</span> 2021 года –
+                                    акушер-гинеколог клиники <span style="text-transform: capitalize;">ZARMED PRATIKSHA
+                                        B</span>og'ishamol.
+                                    <span style="text-transform: capitalize;">Неоднократно</span> была награждена
+                                    почётными грамотами <span style="text-transform: capitalize;">Министерства</span>
+                                    здравоохранения
+                                    <span style="text-transform: capitalize;">Самаркандской</span> области <span
+                                        style="text-transform: capitalize;">Самаркандского</span> областного хокимията.<br>
+                                    <span style="text-transform: capitalize;">Фарида Салохитдиновна</span> проводит
+                                    тщательную диагностику, лечение и реабилитацию
+                                    гинекологически больных и беременных.
+                                </p>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Youtube videolar -->
+
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <iframe style="width: 95%; margin:5px auto;" height="315" src="https://www.youtube.com/embed/WuzFmLiax4A"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <iframe style="width: 95%; margin:5px auto;" height="315" src="https://www.youtube.com/embed/HTZ-pklXxsk"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer qismi -->
+
+        <footer class="footer py-5 m-0 border-top" style=" border:#283779;min-width:100% ;">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                        <a href="https://zarmedpratiksha.uz/">
+                            <img width="200px" src="https://zarmedpratiksha.uz/backend/web/img/logo.svg"
+                                alt="rasm topilmadi">
+                        </a>
+                        <h6 style="line-height:25px ;">
+                            <p class="mt-3 mb-1" style="color:#283779;">
+                                “<span style="text-transform: uppercase;">ZARMED PRATIKSHA</span> <span
+                                    style="text-transform: capitalize;">Bog'ishamol”</span> – первая клиника в <span
+                                    style="text-transform: capitalize;">Узбекистане</span>, ставшая образцом
+                                высочайших стандартов здравоохранения благодаря сочетанию высококвалифицированных
+                                специалистов, новейшего оборудования и современной инфраструктуры.
+                            </p>
+                        </h6>
+                         <div class="">
+                            <ul class="social-links-a square-link list-unstyled d-flex flex-row">
+                                <li class="m-2">
+                                    <a class="btn btn-primary d-flex justify-content-center align-items-center"
+                                        style="color:blue;background:white;width:30px; height:30px;border-radius: 50%;"
+                                        target="_blank" href="https://www.instagram.com/zarmedpratiksha/">
+                                        <i class="fa-brands fa-instagram"></i></a>
+                                </li>
+                                <li class="m-2">
+                                    <a class="btn btn-primary d-flex justify-content-center align-items-center"
+                                        style="color:blue;background:white;width:30px; height:30px;border-radius: 50%;"
+                                        target="_blank" href="https://www.facebook.com/zarmedpratiksha/"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li class="m-2">
+                                    <a class="btn btn-primary d-flex justify-content-center align-items-center"
+                                        style="color:blue;background:white;width:30px; height:30px;border-radius: 50%;"
+                                        target="_blank" href="https://www.youtube.com/channel/UCGvS2Np6R03scueouVVpF8A"><i
+                                        class="fab fa-youtube"></i></a>
+                                </li>
+                                <li class="m-2">
+                                    <a class="btn btn-primary d-flex justify-content-center align-items-center"
+                                        style="color:blue;background:white;width:30px; height:30px;border-radius: 50%;"
+                                        target="_blank"
+                                        href="https://t.me/zarmedportal"><i class="fa-brands fa-telegram"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-7 col-xl-7 col-xxl-7">
+                    </div>
+                </div>
+        </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
