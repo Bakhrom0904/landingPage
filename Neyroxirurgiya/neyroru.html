@@ -296,30 +296,30 @@
                             </div>
                             <!-- Formadan pochtaga xabar yuborish uchun script -->
 
-                                        <script type="text/javascript"
-                        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-                                <script type="text/javascript">
-                                    emailjs.init('aYgzAqtKOYy5Utpai')
-                                    const btn = document.getElementById('button');
-                            document.getElementById('form')
-                            .addEventListener('submit', function(event) {
-                            event.preventDefault();
-                            btn.value = 'Отправка...';
-                            const serviceID = 'default_service';
-                            const templateID = 'template_g9jh70b';
-                            emailjs.sendForm(serviceID, templateID, this)
-                                .then(() => {
-                                btn.value = 'Отправил';
-                                alert('Сообщение было отправлено');
-                                    document.getElementById("ism").value = '';
-                                    document.getElementById('tel').value = '';
-                                    document.getElementById('email').value = '';
-                                    document.getElementById('message').value = '';
-                                }, (err) => {
-                                btn.value = 'Send Email';
-                                alert(JSON.stringify(err));
-                                });
-                            });
+                            <script type="text/javascript"
+                                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                            <script type="text/javascript">
+                                emailjs.init('aYgzAqtKOYy5Utpai')
+                                const btn = document.getElementById('button');
+                                document.getElementById('form')
+                                    .addEventListener('submit', function (event) {
+                                        event.preventDefault();
+                                        btn.value = 'Отправка...';
+                                        const serviceID = 'default_service';
+                                        const templateID = 'template_g9jh70b';
+                                        emailjs.sendForm(serviceID, templateID, this)
+                                            .then(() => {
+                                                btn.value = 'Отправил';
+                                                alert('Сообщение было отправлено');
+                                                document.getElementById("ism").value = '';
+                                                document.getElementById('tel').value = '';
+                                                document.getElementById('email').value = '';
+                                                document.getElementById('message').value = '';
+                                            }, (err) => {
+                                                btn.value = 'Send Email';
+                                                alert(JSON.stringify(err));
+                                            });
+                                    });
                             </script>
                         </div>
                     </div>
@@ -486,8 +486,8 @@
                                 allowfullscreen></iframe>
                         </div>
                         <div class="col-md-6 mt-md-0 mt-3">
-                            <iframe class="w-100 rounded" height="300" src="https://www.youtube.com/embed/3IYMeFYay7Q"
-                                title="ZARMED PRATIKSHA Bog&#39;ishamol" frameborder="0"
+                            <iframe class="w-100 rounded" height="300" src="https://www.youtube.com/embed/R8QZi2U3OWk"
+                                title="umurtqa pog‘onasining turli qismlaridagi churralarni" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowfullscreen></iframe>
                         </div>
