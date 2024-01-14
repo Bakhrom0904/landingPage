@@ -234,7 +234,7 @@
             </div>
         </div>
     </div>
-    
+
 
     <main>
 
@@ -298,7 +298,8 @@
                 </div>
             </div>
             <div class="row my-5">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7 d-flex flex-column justify-content-center">
+                <div
+                    class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7 d-flex flex-column justify-content-center">
                     <p class="matn2"><span style="color: #F19035;font-weight: 900;">GINEKOLOGIK</span><span
                             style="color:#283779 ;font-weight: 900;"> JARROHLIK:</span></p>
                     <p class="matn2"><i class="fas fa-plus-circle"></i> &nbsp;Laparoskopik - tuxumdon kistektomiyasi</p>
@@ -314,47 +315,51 @@
                 </div>
 
                 <!-- Formani boshlanishi -->
-                 
-                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 d-flex flex-column justify-content-center">
+
+                <div
+                    class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 d-flex flex-column justify-content-center">
                     <h2 style="color: #283779;font-weight: 600;text-align: center;"> Mutaxassis qabuliga yozilish</h2>
                     <div>
                         <form id="form">
-                            <input type="text" class="form-control my-2" name="ism" id="ism"  placeholder="Ism" required>
-                            <input type="tel" class="form-control my-2" name="tel" id="tel"  placeholder="Tel" required>
-                            <input type="email" class="form-control my-2" name="email" id="email"  placeholder="El.pochta">
-                            <textarea name="message" id="message" class="form-control my-2" placeholder="Xabar" required></textarea>
-                            <input type="submit" id="button" class=" form-control" style="background-color: #283779;color: white;" value="Yuborish">
+                            <input type="text" class="form-control my-2" name="ism" id="ism" placeholder="Ism" required>
+                            <input type="tel" class="form-control my-2" name="tel" id="tel" placeholder="Tel" required>
+                            <input type="email" class="form-control my-2" name="email" id="email"
+                                placeholder="El.pochta">
+                            <textarea name="message" id="message" class="form-control my-2" placeholder="Xabar"
+                                required></textarea>
+                            <input type="submit" id="button" class=" form-control"
+                                style="background-color: #283779;color: white;" value="Yuborish">
                         </form>
                     </div>
-                </div> 
+                </div>
 
                 <!-- Formadan pochtaga xabar yuborish uchun script -->
-                
+
                 <script type="text/javascript"
-                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
                 <script type="text/javascript">
                     emailjs.init('aYgzAqtKOYy5Utpai')
                     const btn = document.getElementById('button');
-            document.getElementById('form')
-            .addEventListener('submit', function(event) {
-            event.preventDefault();
-            btn.value = 'Yuborilmoqda...';
-            const serviceID = 'default_service';
-            const templateID = 'template_4081x72';
-            emailjs.sendForm(serviceID, templateID, this)
-                .then(() => {
-                btn.value = 'Xabar yuborildi';
-                alert('Xabaringiz yuborildi');
-                    document.getElementById("ism").value = '';
-                    document.getElementById('tel').value = '';
-                    document.getElementById('email').value = '';
-                    document.getElementById('message').value = '';
-                }, (err) => {
-                btn.value = 'Send Email';
-                alert(JSON.stringify(err));
-                });
-            });
-                  </script>
+                    document.getElementById('form')
+                        .addEventListener('submit', function (event) {
+                            event.preventDefault();
+                            btn.value = 'Yuborilmoqda...';
+                            const serviceID = 'default_service';
+                            const templateID = 'template_4081x72';
+                            emailjs.sendForm(serviceID, templateID, this)
+                                .then(() => {
+                                    btn.value = 'Xabar yuborildi';
+                                    alert('Xabaringiz yuborildi');
+                                    document.getElementById("ism").value = '';
+                                    document.getElementById('tel').value = '';
+                                    document.getElementById('email').value = '';
+                                    document.getElementById('message').value = '';
+                                }, (err) => {
+                                    btn.value = 'Send Email';
+                                    alert(JSON.stringify(err));
+                                });
+                        });
+                </script>
             </div>
 
             <!-- Doktorlar haqida malumot -->
@@ -397,33 +402,40 @@
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex flex-column">
                         <div class="w-100 d-flex justify-content-center align-items-center">
-                            <img src="https://zarmedpratiksha.uz/uploads/landpage/Endoskopiya/Sharma-1.jpg?_t=1657701177"
+                            <img src="https://zarmedpratiksha.uz/uploads/landpage/Farhod-Hamidovich.jpg?_t=1700761638"
                                 style="width: 300px; height: 300px;border-radius: 50%; object-fit:cover;border: 10px solid #283779;"
                                 alt="">
                         </div>
                         <div class="w-100 d-flex flex-column justify-content-center align-items-center p-4 ">
-                            <h3><span style="text-transform: capitalize;">Dharmender Sharma </span></h3>
+                            <h3><span style="text-transform: capitalize;">Saidov Farxod Xamidovich</span></h3>
                             <h6 style="line-height:27px ;">
                                 <p style="color: #283779;">
-                                    <span style="text-transform: capitalize;">Doktor Dharmender Sharma</span>
-                                    laparoskopik, oshqozon-ichak va bariatrik (vazn yo'qotish jarrohligi) bo'yicha 22
-                                    yillik tajribaga ega.
-                                    <span style="text-transform: uppercase;">BDS, PGIMS R</span>ohtak. <span
-                                        style="text-transform: capitalize;">U Medantada</span> 11 yil ishlagan - <span
-                                        style="text-transform: capitalize;">The Medicity Gurgaon (GI,
-                                        Laparoskopik</span> va Bariatrik jarrohlik bo'limi) <span
-                                        style="text-transform: capitalize;">Doktor Dharmender Sharma MAX</span>
-                                    kasalxonasida, <span style="text-transform: capitalize;">Saket, Dehlida</span>
-                                    jarrohlik bo'yicha ta'limni davom ettirgan.
-                                    <span style="text-transform: capitalize;">Doktor Dharmender Sharma</span> dalillarga
-                                    asoslangan tibbiyot va <span style="text-transform: uppercase;">ERAS</span>
-                                    (jarrohlikdan keyin yaxshilangan tiklanish) protokollariga amal qiladi. <span
-                                        style="text-transform: capitalize;">Shunday</span> qilib, barcha bemorlar
-                                    qisqaroq kasalxonada qolish bilan xalqaro standartlarga muvofiq eng yangi tibbiy
-                                    boshqaruvni oladilar.
-                                    <span style="text-transform: capitalize;">Doktor Dharmender Sharma</span>,
-                                    shuningdek, <span style="text-transform: uppercase;">UG & PG T</span>ibbiyot ta'limi
-                                    bo'yicha o'qituvchilik tajribasiga ega.
+                                    <span style="text-transform: capitalize;">Farxod Xamidovich</span>
+                                    - jarroh, proktolog, tibbiyot fanlari nomzodi <span
+                                        style="text-transform: uppercase;">(PhD)</span>.
+
+                                    <span style="text-transform: capitalize;">Umumiy</span> jarrohlik, ortiqcha vazn
+                                    <span style="text-transform: uppercase;">BARIATRIUM</span> va <span
+                                        style="text-transform: uppercase;">LAZER PROKTOLOGIYASI</span> bo'yicha
+                                    mutaxassis.
+                                    <span style="text-transform: capitalize;">Moskva (Moskva Klinik</span> tadqiqot
+                                    markazi), <span style="text-transform: capitalize;">Sankt-Peterburg (N.I.
+                                        Pirogov</span> nomidagi Oliy
+                                    tibbiy texnologiyalar klinikasi), <span style="text-transform: capitalize;">Toshkent
+                                        (Respublika</span> shoshilinch tibbiy yordam
+                                    ilmiy markazi) va Samarqand (Zarmed Pratiksha)dagi tibbiyot markazlarida 14 yillik
+                                    tajribali muvaffaqiyatli ish.
+
+                                    <span style="text-transform: capitalize;">Farxod Xamidovich</span> quyidagi
+                                    operatsiyalarni bajaradi:
+                                    1) <span style="text-transform: capitalize;">Ortiqcha</span> vazn va semizlik uchun
+                                    oshqozonni kamaytirish - bariatrics SLEEV
+                                    2) <span style="text-transform: capitalize;">O't</span> pufagidagi toshlarni olib
+                                    tashlash - Laparoskopik xoletsistektomiya
+                                    3) <span style="text-transform: capitalize;">Amerika</span> texnologiyasidan
+                                    foydalangan holda lazer proktologiyasi (gemorroy, yoriq,
+                                    polip, koksiks kistasi) <span style="text-transform: capitalize;">(Jonson & Jonson,
+                                        AQSh).</span>
                                 </p>
                             </h6>
                         </div>
@@ -437,15 +449,16 @@
                 <div class="col-12 row w-100">
                     <div
                         class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex justify-content-center flex-column">
-                        <iframe style="width: 95% ; margin:5px auto;" height="315"
-                            src="https://www.youtube.com/embed/WFrQ_97HfDY" title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        <iframe style="width: 95%; margin:5px auto;" height="315" src="https://www.youtube.com/embed/n0EIOaEwTyc"
+                            title="“ZARMED PRATIKSHA Bog‘ishamol” klinikasida gemorroy (bavosil)ni olib tashlash bo‘yicha ..."
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
                     </div>
                     <div
                         class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex justify-content-center flex-column">
-                        <iframe style="width: 95%; margin:5px auto;" height="315"
-                            src="https://www.youtube.com/embed/3IYMeFYay7Q" title="YouTube video player" frameborder="0"
+                        <iframe style="width: 95% ; margin:5px auto;" height="315"
+                            src="https://www.youtube.com/embed/WFrQ_97HfDY" title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
@@ -473,7 +486,7 @@
                                 tufayli eng yuqori sog'liqni saqlash standartlari namunasiga aylangan.
                             </p>
                         </h6>
-                       <div class="">
+                        <div class="">
                             <ul class="social-links-a square-link list-unstyled d-flex flex-row">
                                 <li class="m-2">
                                     <a class="btn btn-primary d-flex justify-content-center align-items-center"
@@ -484,19 +497,21 @@
                                 <li class="m-2">
                                     <a class="btn btn-primary d-flex justify-content-center align-items-center"
                                         style="color:blue;background:white;width:30px; height:30px;border-radius: 50%;"
-                                        target="_blank" href="https://www.facebook.com/zarmedpratiksha/"><i class="fab fa-facebook-f"></i></a>
-                                </li>
-                                <li class="m-2">
-                                    <a class="btn btn-primary d-flex justify-content-center align-items-center"
-                                        style="color:blue;background:white;width:30px; height:30px;border-radius: 50%;"
-                                        target="_blank" href="https://www.youtube.com/channel/UCGvS2Np6R03scueouVVpF8A"><i
-                                        class="fab fa-youtube"></i></a>
+                                        target="_blank" href="https://www.facebook.com/zarmedpratiksha/"><i
+                                            class="fab fa-facebook-f"></i></a>
                                 </li>
                                 <li class="m-2">
                                     <a class="btn btn-primary d-flex justify-content-center align-items-center"
                                         style="color:blue;background:white;width:30px; height:30px;border-radius: 50%;"
                                         target="_blank"
-                                        href="https://t.me/zarmedportal"><i class="fa-brands fa-telegram"></i></a>
+                                        href="https://www.youtube.com/channel/UCGvS2Np6R03scueouVVpF8A"><i
+                                            class="fab fa-youtube"></i></a>
+                                </li>
+                                <li class="m-2">
+                                    <a class="btn btn-primary d-flex justify-content-center align-items-center"
+                                        style="color:blue;background:white;width:30px; height:30px;border-radius: 50%;"
+                                        target="_blank" href="https://t.me/zarmedportal"><i
+                                            class="fa-brands fa-telegram"></i></a>
                                 </li>
                             </ul>
                         </div>

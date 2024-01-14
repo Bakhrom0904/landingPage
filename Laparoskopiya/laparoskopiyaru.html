@@ -206,14 +206,14 @@
 
         }
     </style>
-            <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-D8WKCHQN7Q"></script>
-        <script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D8WKCHQN7Q"></script>
+    <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-D8WKCHQN7Q');
-        </script>
+    </script>
 </head>
 
 <body>
@@ -322,48 +322,53 @@
                     <br>
                 </div>
 
-                 <!-- Formani boshlanishi -->
-                 
-                 <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 d-flex flex-column justify-content-center">
-                    <h2 style="color: #283779;text-transform: uppercase;font-weight: 600;text-align: center;"> ЗАПИСЬ НА ПРИЁМ К СПЕЦИАЛИСТУ</h2>
+                <!-- Formani boshlanishi -->
+
+                <div
+                    class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 d-flex flex-column justify-content-center">
+                    <h2 style="color: #283779;text-transform: uppercase;font-weight: 600;text-align: center;"> ЗАПИСЬ НА
+                        ПРИЁМ К СПЕЦИАЛИСТУ</h2>
                     <div>
                         <form id="form">
-                            <input type="text" class="form-control my-2" name="ism" id="ism"  placeholder="Имя" required>
-                            <input type="tel" class="form-control my-2" name="tel" id="tel"  placeholder="Tел" required>
-                            <input type="email" class="form-control my-2" name="email" id="email"  placeholder="Эл.почта">
-                            <textarea name="message" id="message" class="form-control my-2" placeholder="Сообщение" required></textarea>
-                            <input type="submit" id="button" class=" form-control" style="background-color: #283779;color: white;" value="Отправить">
+                            <input type="text" class="form-control my-2" name="ism" id="ism" placeholder="Имя" required>
+                            <input type="tel" class="form-control my-2" name="tel" id="tel" placeholder="Tел" required>
+                            <input type="email" class="form-control my-2" name="email" id="email"
+                                placeholder="Эл.почта">
+                            <textarea name="message" id="message" class="form-control my-2" placeholder="Сообщение"
+                                required></textarea>
+                            <input type="submit" id="button" class=" form-control"
+                                style="background-color: #283779;color: white;" value="Отправить">
                         </form>
                     </div>
-                </div> 
+                </div>
 
                 <!-- Formadan pochtaga xabar yuborish uchun script -->
-                
+
                 <script type="text/javascript"
-                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
                 <script type="text/javascript">
                     emailjs.init('aYgzAqtKOYy5Utpai')
                     const btn = document.getElementById('button');
                     document.getElementById('form')
-                    .addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    btn.value = 'Отправка...';
-                    const serviceID = 'default_service';
-                    const templateID = 'template_4081x72';
-                    emailjs.sendForm(serviceID, templateID, this)
-                        .then(() => {
-                        btn.value = 'Отправил';
-                        alert('Сообщение было отправлено');
-                            document.getElementById("ism").value = '';
-                            document.getElementById('tel').value = '';
-                            document.getElementById('email').value = '';
-                            document.getElementById('message').value = '';
-                        }, (err) => {
-                        btn.value = 'Send Email';
-                        alert(JSON.stringify(err));
+                        .addEventListener('submit', function (event) {
+                            event.preventDefault();
+                            btn.value = 'Отправка...';
+                            const serviceID = 'default_service';
+                            const templateID = 'template_4081x72';
+                            emailjs.sendForm(serviceID, templateID, this)
+                                .then(() => {
+                                    btn.value = 'Отправил';
+                                    alert('Сообщение было отправлено');
+                                    document.getElementById("ism").value = '';
+                                    document.getElementById('tel').value = '';
+                                    document.getElementById('email').value = '';
+                                    document.getElementById('message').value = '';
+                                }, (err) => {
+                                    btn.value = 'Send Email';
+                                    alert(JSON.stringify(err));
+                                });
                         });
-                    });
-                  </script>
+                </script>
             </div>
 
             <!-- Doktorlar haqida malumot -->
@@ -373,7 +378,7 @@
                     <div class="col-12 d-flex py-3 justify-content-center align-items-center">
                         <p class="doktorlar" style="font-weight: 900;">ЭКСПЕРТЫ ОТДЕЛЕНИЯ ЛАПАРОСКОПИИ </p>
                         <br>
-                    </div>              
+                    </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex flex-column">
                         <div class="w-100 d-flex justify-content-center align-items-center">
                             <img src="https://zarmedpratiksha.uz/uploads/landpage/Endoskopiya/Tojiyev.jpg?_t=1657701177"
@@ -409,30 +414,40 @@
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex flex-column">
                         <div class="w-100 d-flex justify-content-center align-items-center">
-                            <img src="https://zarmedpratiksha.uz/uploads/landpage/Endoskopiya/Sharma-1.jpg?_t=1657701177"
+                            <img src="https://zarmedpratiksha.uz/uploads/landpage/Farhod-Hamidovich.jpg?_t=1700761638"
                                 style="width: 300px; height: 300px;border-radius: 50%; object-fit:cover;border: 10px solid #283779;"
                                 alt="">
                         </div>
                         <div class="w-100 d-flex flex-column justify-content-center align-items-center p-4">
-                            <h3><span style="text-transform: capitalize;">Дхармендер Шарма </span></h3>
+                            <h3><span style="text-transform: capitalize;">Саидов Фарход Хамидович</span></h3>
                             <h6 style="line-height:27px ;">
                                 <p style="color: #283779;">
-                                    <span style="text-transform: capitalize;">Доктор Дхармендер Шарма</span> имеет
-                                    22-летний опыт выполнения передовых лапароскопических, желудочно-кишечных и
-                                    бариатрических операций (операции по снижению веса).
-                                    <span style="text-transform: capitalize;">После</span> получения степени <span
-                                        style="text-transform: uppercase;">MBBS</span> получил степень магистра в
-                                    престижном медицинском колледже <span style="text-transform: capitalize;">Индии, Pt.
-                                        БДС, ПГИМС Рохтак. Он</span> проработал 11 лет в <span
-                                        style="text-transform: capitalize;">Medanta – The Medicity Gurgaon</span>
-                                    (отделение желудочно-кишечного тракта, лапароскопической и бариатрической хирургии).
-                                    <span style="text-transform: capitalize;">Доктор Дхармендер Шарма</span> продолжил
-                                    хирургическое обучение в больнице <span style="text-transform: capitalize;">MAX,
-                                        Сакет, Дели</span>.
-                                    <span style="text-transform: capitalize;">Доктор Дхармендер Шарма</span> следует
-                                    принципам доказательной медицины и протоколам <span
-                                        style="text-transform: uppercase;">ERAS</span> (повышенное восстановление после
-                                    операции).                        
+                                    <span style="text-transform: capitalize;">Фарход Хамидович</span>
+                                    хирург, проктолог, кандидат медицинских наук <span
+                                        style="text-transform: uppercase;">(PhD)</span>.
+
+                                    <span style="text-transform: capitalize;">Специалист</span> в области общей
+                                    хирургии, <span style="text-transform: uppercase;">БАРИАТРИИ</span> лишнего веса и
+                                    <span style="text-transform: uppercase;">ЛАЗЕРНОЙ ПРОКТОЛОГИИ.</span>
+                                    14-лет опытной успешной работы в медицинских центрах <span
+                                        style="text-transform: capitalize;">Москвы (Московский</span> клинический
+                                    научный центр), <span style="text-transform: capitalize;">Санкт-Петербурга
+                                        (Клиника</span> высоких медицинских технологий им <span
+                                        style="text-transform: capitalize;">Н.И
+                                        Пирогова), Ташкента (Республиканский</span> научный центр экстренной медицинской
+                                    помощи) и
+                                    <span style="text-transform: capitalize;">Самарканда (Зармед Пратикша).</span>
+
+                                    <span style="text-transform: capitalize;">Фарход Хамидович</span> выполняет
+                                    следующие операции:
+                                    1) <span style="text-transform: capitalize;">Уменьшение</span> желудка при лишнем
+                                    весе и ожирении — бариатрия <span style="text-transform: uppercase;">SLEEV</span>
+                                    2) <span style="text-transform: capitalize;">Удаление</span> камней желчного пузыря
+                                    — <span style="text-transform: capitalize;">Лапароскопическая</span> холецистэктомия
+                                    3) <span style="text-transform: capitalize;">Лазерная</span> проктология (геморрой,
+                                    трещина, полип, киста копчика) на Американской
+                                    технологии (<span style="text-transform: capitalize;">Johnson & Johnson,
+                                        USA)</span>.
                                 </p>
                             </h6>
                         </div>
@@ -447,14 +462,16 @@
                     <div
                         class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex justify-content-center flex-column">
                         <iframe style="width: 95%; margin:5px auto;" height="315"
-                            src="https://www.youtube.com/embed/WFrQ_97HfDY" title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            src="https://www.youtube.com/embed/n0EIOaEwTyc"
+                            title="“ZARMED PRATIKSHA Bog‘ishamol” klinikasida gemorroy (bavosil)ni olib tashlash bo‘yicha ..."
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
                     </div>
                     <div
                         class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 d-flex justify-content-center flex-column">
                         <iframe style="width: 95%; margin:5px auto;" height="315"
-                            src="https://www.youtube.com/embed/3IYMeFYay7Q" title="YouTube video player" frameborder="0"
+                            src="https://www.youtube.com/embed/WFrQ_97HfDY" title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                     </div>
@@ -492,19 +509,21 @@
                                 <li class="m-2">
                                     <a class="btn btn-primary d-flex justify-content-center align-items-center"
                                         style="color:blue;background:white;width:30px; height:30px;border-radius: 50%;"
-                                        target="_blank" href="https://www.facebook.com/zarmedpratiksha/"><i class="fab fa-facebook-f"></i></a>
-                                </li>
-                                <li class="m-2">
-                                    <a class="btn btn-primary d-flex justify-content-center align-items-center"
-                                        style="color:blue;background:white;width:30px; height:30px;border-radius: 50%;"
-                                        target="_blank" href="https://www.youtube.com/channel/UCGvS2Np6R03scueouVVpF8A"><i
-                                        class="fab fa-youtube"></i></a>
+                                        target="_blank" href="https://www.facebook.com/zarmedpratiksha/"><i
+                                            class="fab fa-facebook-f"></i></a>
                                 </li>
                                 <li class="m-2">
                                     <a class="btn btn-primary d-flex justify-content-center align-items-center"
                                         style="color:blue;background:white;width:30px; height:30px;border-radius: 50%;"
                                         target="_blank"
-                                        href="https://t.me/zarmedportal"><i class="fa-brands fa-telegram"></i></a>
+                                        href="https://www.youtube.com/channel/UCGvS2Np6R03scueouVVpF8A"><i
+                                            class="fab fa-youtube"></i></a>
+                                </li>
+                                <li class="m-2">
+                                    <a class="btn btn-primary d-flex justify-content-center align-items-center"
+                                        style="color:blue;background:white;width:30px; height:30px;border-radius: 50%;"
+                                        target="_blank" href="https://t.me/zarmedportal"><i
+                                            class="fa-brands fa-telegram"></i></a>
                                 </li>
                             </ul>
                         </div>
