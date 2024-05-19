@@ -12,206 +12,217 @@
   <!-- <link rel="stylesheet" href="style.css"> -->
   <style>
     * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-:root {
-  --primary: #283779;
-}
+    :root {
+      --primary: #283779;
+    }
 
-ul,
-ol {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+    ul,
+    ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
 
-/* SITE-CONTAINER */
-.site-container {
-  width: 88%;
-  margin: 0 auto;
-}
+    /* SITE-CONTAINER */
+    .site-container {
+      width: 88%;
+      margin: 0 auto;
+    }
 
-.bg-primary,
-.btn-primary {
-  background-color: var(--primary) !important;
-}
-.text-primary {
-  color: var(--primary) !important;
-}
-/* ----- HEADER ----- */
+    .bg-primary,
+    .btn-primary {
+      background-color: var(--primary) !important;
+    }
 
-.header {
-  height: 90px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  background-color: #fff;
-}
-.header-contact i {
-  font-size: 23px;
-}
-.header-contact span {
-  font-size: 18px;
-}
+    .text-primary {
+      color: var(--primary) !important;
+    }
 
-/*  ---- HERO  -----*/
+    /* ----- HEADER ----- */
 
-.hero {
-  padding-top: 90px;
-}
-.hero .hero-img {
-  display: block;
-  height: calc(100vh - 90px);
-  width: 80%;
-  margin: 0 auto;
-}
+    .header {
+      height: 90px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      background-color: #fff;
+    }
 
+    .header-contact i {
+      font-size: 23px;
+    }
 
-/*  ---- RECEPTION --- */
+    .header-contact span {
+      font-size: 18px;
+    }
 
-.reception-form .reception-form-title {
-  font-weight: 600;
-}
+    /*  ---- HERO  -----*/
 
-.reception-form input,
-.reception-form textarea {
-  box-shadow: none !important;
-  padding: 10px 20px;
-  border: 1px solid #eee;
-  background-color: #fbfbfb;
-}
+    .hero {
+      padding-top: 90px;
+    }
 
-/* ----- SERVICES ------  */
-
-.services-title {
-  font-weight: 600;
-}
-.services-list .services-item {
-  font-size: 22px;
-  color: #02030a;
-  font-weight: 500;
-}
-.services-list .services-item:not(:last-child) {
-  margin-bottom: 13px;
-}
-.services-list .services-item i {
-  font-size: 24px;
-  margin-right: 5px;
-}
-
-/* ----- DOCTORS ---- */
-
-.doctors-inner {
-  background-color: #131c411f;
-  box-shadow: 0 0 20px #28377930;
-  border-radius: 20px;
-  margin-top: 60px;
-}
-
-.card-img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  border: 10px solid var(--primary);
-}
-.accordion-item {
-  background-color: transparent !important;
-}
-
-.doctors-inner .card .card-title {
-  font-size: 28px;
-  font-weight: 600;
-  color: #222;
-}
-.doctors-inner .card-text {
-  text-align: justify;
-}
-
-/* ----- VIDEOS -------- */
-.videos-inner {
-  background-color: #131c411f;
-  box-shadow: 0 0 20px #28377930;
-  border-radius: 20px;
-}
-
-/* ------ FOOTER ---- */
-.social-link {
-  text-decoration: none;
-  display: block;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
-  border: 1px solid blue;
-  box-shadow: 0 0 10px rgb(183, 183, 228);
-  color: blue;
-  border-radius: 50%;
-  margin-right: 20px;
-}
+    .hero .hero-img {
+      display: block;
+      height: calc(100vh - 90px);
+      width: 80%;
+      margin: 0 auto;
+    }
 
 
-/* ------- MEDIA QUERY ------ */
-@media  only screen and (max-width: 900px) {
-  .hero .hero-img {
-    height: calc(40vh - 90px);
-  }
-}
+    /*  ---- RECEPTION --- */
 
-@media only screen and (max-width: 767px) {
-  .site-container {
-    width: 94%;
-  }
+    .reception-form .reception-form-title {
+      font-weight: 600;
+    }
 
-  .logo-img {
-    width: 150px;
-  }
-  .hero .hero-img {
-    width: 95%;
-  }
-}
+    .reception-form input,
+    .reception-form textarea {
+      box-shadow: none !important;
+      padding: 10px 20px;
+      border: 1px solid #eee;
+      background-color: #fbfbfb;
+    }
 
-@media only screen and (max-width: 576px) {
-  .services-list .services-item {
-    font-size: 18px;
-  }
+    /* ----- SERVICES ------  */
 
-  .card-img {
-    width: 250px;
-    height: 250px;
-  }
-}
+    .services-title {
+      font-weight: 600;
+    }
 
-@media only screen and (max-width: 450px) {
-  .logo-img {
-    width: 130px;
-  }
+    .services-list .services-item {
+      font-size: 22px;
+      color: #02030a;
+      font-weight: 500;
+    }
 
-  .header-contact i {
-    font-size: 20px;
-  }
-  .header-contact span {
-    font-size: 16px;
-  }
+    .services-list .services-item:not(:last-child) {
+      margin-bottom: 13px;
+    }
 
-  .lang-btn {
-    padding: 3px 6px;
-    font-size: 15px;
-  }
-  
-  .doctors-inner .card .card-title {
-    font-size: 24px;
-  }
-}
+    .services-list .services-item i {
+      font-size: 24px;
+      margin-right: 5px;
+    }
 
+    /* ----- DOCTORS ---- */
+
+    .doctors-inner {
+      background-color: #131c411f;
+      box-shadow: 0 0 20px #28377930;
+      border-radius: 20px;
+      margin-top: 60px;
+    }
+
+    .card-img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 10px solid var(--primary);
+    }
+
+    .accordion-item {
+      background-color: transparent !important;
+    }
+
+    .doctors-inner .card .card-title {
+      font-size: 28px;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .doctors-inner .card-text {
+      text-align: justify;
+    }
+
+    /* ----- VIDEOS -------- */
+    .videos-inner {
+      background-color: #131c411f;
+      box-shadow: 0 0 20px #28377930;
+      border-radius: 20px;
+    }
+
+    /* ------ FOOTER ---- */
+    .social-link {
+      text-decoration: none;
+      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      background-color: #fff;
+      border: 1px solid blue;
+      box-shadow: 0 0 10px rgb(183, 183, 228);
+      color: blue;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+
+    /* ------- MEDIA QUERY ------ */
+    @media only screen and (max-width: 900px) {
+      .hero .hero-img {
+        height: calc(40vh - 90px);
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      .site-container {
+        width: 94%;
+      }
+
+      .logo-img {
+        width: 150px;
+      }
+
+      .hero .hero-img {
+        width: 95%;
+      }
+    }
+
+    @media only screen and (max-width: 576px) {
+      .services-list .services-item {
+        font-size: 18px;
+      }
+
+      .card-img {
+        width: 250px;
+        height: 250px;
+      }
+    }
+
+    @media only screen and (max-width: 450px) {
+      .logo-img {
+        width: 130px;
+      }
+
+      .header-contact i {
+        font-size: 20px;
+      }
+
+      .header-contact span {
+        font-size: 16px;
+      }
+
+      .lang-btn {
+        padding: 3px 6px;
+        font-size: 15px;
+      }
+
+      .doctors-inner .card .card-title {
+        font-size: 24px;
+      }
+    }
   </style>
 </head>
 
@@ -229,8 +240,10 @@ ol {
             <i class="fa-solid fa-phone-volume me-sm-2 me-1"></i>
             <span class="fw-bold">+998 55 702 10 63</span>
           </a>
-          <a href="https://zarmedpratiksha.uz/page?u=ortopediya" target="_blank" class="btn btn-primary ms-3 border-0 d-none d-md-block">O'zbekcha</a>
-          <a href="https://zarmedpratiksha.uz/page?u=ortopediya" target="_blank" class="btn btn-primary ms-2 border-0 d-block d-md-none lang-btn">Uz</a>
+          <a href="https://zarmedpratiksha.uz/page?u=ortopediya" target="_blank"
+            class="btn btn-primary ms-3 border-0 d-none d-md-block">O'zbekcha</a>
+          <a href="https://zarmedpratiksha.uz/page?u=ortopediya" target="_blank"
+            class="btn btn-primary ms-2 border-0 d-block d-md-none lang-btn">Uz</a>
         </div>
       </div>
     </div>
@@ -254,7 +267,11 @@ ol {
           <div class="row gx-md-5 gx-0 align-items-center">
             <div class="col-md-6">
               <div class="reception-media">
-                  <iframe width="560" height="315" class="w-100 d-block" src="https://www.youtube.com/embed/9SIoOMSFm8k" title="Итоги ушедшего плодотворного 2022 года  для &quot;ZARMED PRATIKSHA Bog&#39;ishamol&quot; ." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" class="w-100 d-block" src="https://www.youtube.com/embed/e18XO5cJv9E"
+                  title="Siz bilan doktor Rakshit Sannegovda hamkasblari doktor Sardor va doktor Аtabek hamrohligida..."
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
               </div>
             </div>
             <div class="col-md-6">
@@ -265,37 +282,38 @@ ol {
                   <input type="text" class="form-control mb-3 mt-4" name="ism" id="ism" placeholder="Имя" required>
                   <input type="tel" class="form-control mb-3" name="tel" id="tel" placeholder="Tел" required>
                   <input type="email" class="form-control mb-3" name="email" id="email" placeholder="Эл.почта">
-                  <textarea name="message" id="message" class="form-control my-2" placeholder="Сообщение" required></textarea>
+                  <textarea name="message" id="message" class="form-control my-2" placeholder="Сообщение"
+                    required></textarea>
                   <button type="submit" id="button" class="btn btn-primary w-100 py-2">Отправить</button>
                 </form>
               </div>
               <!-- Formadan pochtaga xabar yuborish uchun script -->
 
               <script type="text/javascript"
-              src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-                      <script type="text/javascript">
-                          emailjs.init('aYgzAqtKOYy5Utpai')
-                          const btn = document.getElementById('button');
-                  document.getElementById('form')
-                  .addEventListener('submit', function(event) {
-                  event.preventDefault();
-                  btn.value = 'Отправка...';
-                  const serviceID = 'default_service';
-                  const templateID = 'template_emvcnxb';
-                  emailjs.sendForm(serviceID, templateID, this)
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+              <script type="text/javascript">
+                emailjs.init('aYgzAqtKOYy5Utpai')
+                const btn = document.getElementById('button');
+                document.getElementById('form')
+                  .addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    btn.value = 'Отправка...';
+                    const serviceID = 'default_service';
+                    const templateID = 'template_emvcnxb';
+                    emailjs.sendForm(serviceID, templateID, this)
                       .then(() => {
-                      btn.value = 'Отправил';
-                      alert('Сообщение было отправлено');
-                          document.getElementById("ism").value = '';
-                          document.getElementById('tel').value = '';
-                          document.getElementById('email').value = '';
-                          document.getElementById('message').value = '';
+                        btn.value = 'Отправил';
+                        alert('Сообщение было отправлено');
+                        document.getElementById("ism").value = '';
+                        document.getElementById('tel').value = '';
+                        document.getElementById('email').value = '';
+                        document.getElementById('message').value = '';
                       }, (err) => {
-                      btn.value = 'Send Email';
-                      alert(JSON.stringify(err));
+                        btn.value = 'Send Email';
+                        alert(JSON.stringify(err));
                       });
                   });
-                </script>
+              </script>
             </div>
           </div>
         </div>
@@ -369,7 +387,8 @@ ol {
                         alt="doctor-img">
                     </div>
                     <div class="card-body">
-                      <h5 style="text-transform: capitalize;" class="card-title text-center">Аллабердиев Икром Гофурович</h5>
+                      <h5 style="text-transform: capitalize;" class="card-title text-center">Аллабердиев Икром Гофурович
+                      </h5>
                       <div class="card-text text-primary">
                         <div class="accordion bg-transparent">
                           <div class="accordion-item text-primary">
@@ -529,7 +548,11 @@ ol {
                 allowfullscreen=""></iframe>
             </div>
             <div class="col-md-6 mt-md-0 mt-3">
-              <iframe class="w-100 rounded" height="300" src="https://www.youtube.com/embed/bAYNmG6yUmM" title="Jarrohlik amaliyotini Hindistonlik ortoped-jarroh Doktor Rakshit Sannegovda amalga oshirdi." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
+              <iframe class="w-100 rounded" height="300" src="https://www.youtube.com/embed/bAYNmG6yUmM"
+                title="Jarrohlik amaliyotini Hindistonlik ortoped-jarroh Doktor Rakshit Sannegovda amalga oshirdi."
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
             </div>
           </div>
         </div>
@@ -565,7 +588,8 @@ ol {
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.youtube.com/channel/UCGvS2Np6R03scueouVVpF8A" target="_blank" class="social-link">
+                    <a href="https://www.youtube.com/channel/UCGvS2Np6R03scueouVVpF8A" target="_blank"
+                      class="social-link">
                       <i class="fab fa-youtube"></i>
                     </a>
                   </li>
@@ -581,7 +605,8 @@ ol {
           <div class="col-md-6 mb-md-0 mb-4 order-md-2 order-1">
             <div class="footer-service text-primary">
               <h4 class="text-center">ОТДЕЛЕНИЕ ТРАВМАТОЛОГИИ-ОРТОПЕДИИ</h4>
-              <p class="fw-medium" style="text-align: justify; color: #02030a; font-size: 18px; margin-top: 20px;">Отделение травматологии-ортопедии,
+              <p class="fw-medium" style="text-align: justify; color: #02030a; font-size: 18px; margin-top: 20px;">
+                Отделение травматологии-ортопедии,
                 эндопротезирования суставов и хирургии позвоночника в клинике Zarmed Pratiksha Bog'ishamol, оказывает
                 современную помощь взрослым и детям. Наш клинический опыт в сочетании с передовыми технологиями
                 позволяет нам предоставлять превосходные услуги при широком спектре ортопедических заболеваний и травм.
